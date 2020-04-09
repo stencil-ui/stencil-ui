@@ -11,7 +11,7 @@
       "message": "chore(release): Publish"
     }
   },
-  "packages": ["packages/*", "examples/*"],
+  "packages": ["packages/*", "documentation/*"],
   "loglevel": "success",
   "version": "independent",
   "npmClient": "yarn",

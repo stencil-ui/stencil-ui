@@ -1,0 +1,44 @@
+{
+  "name": "@stencil-ui/header",
+  "version": "0.1.1-alpha.0",
+  "description": "Stencil UI header component.",
+  "private": true,
+  "source": "src/index.js",
+  "main": "dist/header.js",
+  "module": "dist/header.esm.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stencil-ui/stencil-ui.git",
+    "directory": "packages/header"
+  },
+  "homepage": "https://github.com/stencil-ui/stencil-ui/tree/master/packages/header#readme",
+  "scripts": {
+    "clean": "yarn cache clean",
+    "prepare": "microbundle --no-compress -o dist",
+    "watch": "microbundle watch --no-compress -o dist",
+    "storybook": "start-storybook",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@storybook/react": "^5.3.17",
+    "babel-jest": "^25.1.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^25.1.0",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.13.1"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}
