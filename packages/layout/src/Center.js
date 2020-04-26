@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@theme-ui/core'
+import { useTheme } from '@themeprint/ui'
+import { Box } from '@theme-ui/components'
 
-export const Stack = ({
+export const Center = ({
   maxWidth,
   gutter,
   intrinsic,
@@ -9,11 +11,14 @@ export const Stack = ({
   children,
   ...props
 }) => {
+  const foo = useTheme({})
   return (
-    <div
+    <Box
       {...props}
-      base={{
+      __css={{
         maxWidth,
+        marginLeft: 'auto',
+        marginRight: 'auto',
         paddingLeft: gutter,
         paddingRight: gutter,
         ...(intrinsic
@@ -23,11 +28,11 @@ export const Stack = ({
       }}
     >
       {children}
-    </div>
+    </Box>
   )
 }
 
-Stack.defaultProps = {
+Center.defaultProps = {
   maxWidth: '60ch',
   gutter: 1,
   intrinsic: false,
