@@ -4,6 +4,7 @@ import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { Grid } from './Grid'
 import { textReact, paragraphs } from '@utilz/dummy'
+import { arrayOfSize } from './utils'
 
 export default { title: 'Grid' }
 
@@ -14,11 +15,6 @@ const BorderBox = () => (
     ))}
   </Box>
 )
-
-const arrayOfSize = size =>
-  Array(size)
-    .fill()
-    .map((_, i) => i + 1)
 
 const defaultProps = childrenNumber => ({
   children: (
