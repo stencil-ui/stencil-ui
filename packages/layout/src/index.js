@@ -4,9 +4,9 @@ export * from './Grid'
 export * from './Sidebar'
 export * from './Stack'
 export * from './Switcher'
+export * from './Cluster'
 
 // TODO:
-// Cluster
 // Cover
 // Imposter
 // Reel
