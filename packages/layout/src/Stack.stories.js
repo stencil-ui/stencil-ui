@@ -3,7 +3,6 @@ import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Stack } from './Stack'
 import { Box } from '@theme-ui/components'
-
 import { textReact, paragraphs } from '@utilz/dummy'
 
 export default { title: 'Stack' }
@@ -28,7 +27,8 @@ const defaultProps = {
         <Paragraphs />
         <Paragraphs />
         <BorderBox>
-          <Paragraphs /> <Paragraphs />
+          <Paragraphs />
+          <Paragraphs />
         </BorderBox>
       </BorderBox>
       <Paragraphs />

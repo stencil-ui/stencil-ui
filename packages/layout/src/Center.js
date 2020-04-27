@@ -6,8 +6,6 @@ import { Box } from '@theme-ui/components'
 
 export const Center = React.forwardRef(
   ({ maxWidth, gutter, intrinsic, centerText, children, ...props }, ref) => {
-    const foo = useTheme({})
-
     return (
       <Box
         ref={ref}
