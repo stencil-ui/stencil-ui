@@ -2,7 +2,6 @@
   "name": "@stencil-ui/layout",
   "version": "0.1.1-alpha.0",
   "description": "Stencil UI layout components.",
-  "private": true,
   "source": "src/index.js",
   "main": "dist/layout.js",
   "module": "dist/layout.esm.js",
