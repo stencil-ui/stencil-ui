@@ -26,6 +26,6 @@ export const Grid = React.forwardRef(
 )
 
 Grid.defaultProps = {
-  space: 1,
+  space: '0px',
   minWidth: '250px',
 }

@@ -36,10 +36,10 @@ export const Sidebar = React.forwardRef(
             margin: `calc(${space} / 2 * -1)`,
           }}
         >
-          <Box sx={isSidebarLeft ? sidebarStyle : contentStyle}>
+          <Box __css={isSidebarLeft ? sidebarStyle : contentStyle}>
             {isSidebarLeft ? sidebar : content}
           </Box>
-          <Box sx={isSidebarLeft ? contentStyle : sidebarStyle}>
+          <Box __css={isSidebarLeft ? contentStyle : sidebarStyle}>
             {isSidebarLeft ? content : sidebar}
           </Box>
         </Box>
@@ -52,5 +52,5 @@ Sidebar.defaultProps = {
   side: 'left',
   sidebarWidth: null,
   stretch: true,
-  space: 0,
+  space: '0px',
 }

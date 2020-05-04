@@ -21,3 +21,16 @@ export const getChildren = children => {
 
   return children
 }
+
+export const applyStyle = (component, style = {}) => {
+  if (!component) {
+    return { style }
+  }
+
+  if (!component.props) {
+    return { style }
+  }
+
+  // TODO: deepmerge
+  return { style: { ...(component.props.style || {}), ...style } }
+}

@@ -56,3 +56,19 @@ export const withLimit4 = () => (
     <BorderBox />
   </Switcher>
 )
+
+export const withExplictChildMargin = () => (
+  <Switcher space="1rem">
+    <BorderBox />
+    <BorderBox />
+    <BorderBox sx={{ margin: 0 }} />
+  </Switcher>
+)
+
+export const withChildStyle = () => (
+  <Switcher space="1rem">
+    <BorderBox />
+    <BorderBox />
+    <BorderBox style={{ backgroundColor: '#ccc' }} />
+  </Switcher>
+)

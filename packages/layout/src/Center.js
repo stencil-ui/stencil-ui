@@ -29,7 +29,7 @@ export const Center = React.forwardRef(
 
 Center.defaultProps = {
   maxWidth: '60ch',
-  gutter: 1,
+  gutter: '0px',
   intrinsic: false,
   centerText: false,
 }
