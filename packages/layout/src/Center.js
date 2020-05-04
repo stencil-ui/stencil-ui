@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx } from '@theme-ui/core'
-import { useTheme } from '@themeprint/ui'
 import { Box } from '@theme-ui/components'
 
 export const Center = React.forwardRef(
@@ -30,7 +29,7 @@ export const Center = React.forwardRef(
 
 Center.defaultProps = {
   maxWidth: '60ch',
-  gutter: 1,
+  gutter: '0px',
   intrinsic: false,
   centerText: false,
 }

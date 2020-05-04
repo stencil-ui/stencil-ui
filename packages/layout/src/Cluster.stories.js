@@ -28,16 +28,30 @@ const defaultProps = {
 
 export const withDefault = () => <Cluster {...defaultProps} />
 
-export const withSpace = () => <Cluster {...defaultProps} space="3rem" />
+export const withSpace = () => <Cluster {...defaultProps} space="1rem" />
 
 export const withJustify = () => <Cluster {...defaultProps} justify="center" />
 
-export const withAlign = () => <Cluster {...defaultProps} align="center" />
+export const withAlignCenter = () => (
+  <Cluster {...defaultProps} align="center" />
+)
+
+export const withAlignStretch = () => (
+  <Cluster {...defaultProps} sx={{ height: '200px' }} align="stretch" />
+)
 
 export const withUnorderedList = () => (
   <Cluster as="ul" space="1rem" sx={{ listStyleType: 'none' }}>
     {arrayOfSize(10).map(i => (
       <li key={i}>{`List item ${i + 1}`}</li>
     ))}
+  </Cluster>
+)
+
+export const withChildExplicitMargin = () => (
+  <Cluster space="1rem">
+    <BorderBox />
+    <BorderBox />
+    <BorderBox sx={{ margin: 0 }} />
   </Cluster>
 )

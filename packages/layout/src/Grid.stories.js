@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
+import { jsx, ThemeProvider } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { Grid } from './Grid'
 import { textReact, paragraphs } from '@utilz/dummy'
 import { arrayOfSize } from './utils'
+import { defaultTheme } from '@themeprint/ui'
 
 export default { title: 'Grid' }
 
@@ -30,6 +31,16 @@ export const withEven = () => <Grid {...defaultProps(6)} />
 
 export const withOdd = () => <Grid {...defaultProps(7)} />
 
-export const withSpace = () => <Grid {...defaultProps(6)} space="3rem" />
+export const withSpacePx = () => <Grid {...defaultProps(6)} space="10px" />
+
+export const withSpaceEm = () => <Grid {...defaultProps(6)} space="2em" />
+
+export const withSpaceRem = () => <Grid {...defaultProps(6)} space="3rem" />
+
+export const withSpaceFunction = () => (
+  <ThemeProvider theme={defaultTheme}>
+    <Grid {...defaultProps(6)} space={theme => theme.space[2]} />
+  </ThemeProvider>
+)
 
 export const withMinWidth = () => <Grid {...defaultProps(6)} minWidth="140px" />

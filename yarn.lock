@@ -2644,10 +2644,10 @@
   resolved "https://registry.yarnpkg.com/@theme-ui/preset-base/-/preset-base-0.3.0.tgz#853a78195beead04ece4391c5672d690899bec47"
   integrity sha512-bFCYoxfe/Ugr5k5BEy3Gv5jg8+idZHWDt/NM95jgla4qITlaOAMuEL6afoQ5HXbJjp5TnZFZ73qO6cKI8/BFfQ==
 
-"@themeprint/ui@^0.1.1-alpha.1":
-  version "0.1.1-alpha.1"
-  resolved "https://registry.yarnpkg.com/@themeprint/ui/-/ui-0.1.1-alpha.1.tgz#89198f9a72d2b9e4eaf03b0c4a98b1f6b204fabc"
-  integrity sha512-Q6x9eHS8SyHHg1MKKVbApFHIFR0tbQtEzEciJB0BrMdSE74L7NbEzYEPZ0hNlYCGZpsxLY8pz74I9ZmxWCxoyg==
+"@themeprint/ui@0.1.1-alpha.2":
+  version "0.1.1-alpha.2"
+  resolved "https://registry.yarnpkg.com/@themeprint/ui/-/ui-0.1.1-alpha.2.tgz#06f643f0a17ad5328d2d6ca0e7789af76e4ee4b0"
+  integrity sha512-savDP16TUpf2rCmV0C8USUxz34pkmxZrPktOT/tqHT91qYDdoHwyMVH+KEi4kSv2ti2eCj+sPZMuXGuRGhW8nw==
   dependencies:
     "@theme-ui/core" "^0.3.1"
     "@utilz/deepmerge" "^0.1.13"

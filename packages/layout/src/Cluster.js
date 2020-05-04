@@ -17,12 +17,16 @@ export const Cluster = React.forwardRef(
           justifyContent: justify,
           alignItems: align,
           margin: `calc(${adjustedSpace} / 2 * -1)`,
-          '& > *': {
-            margin: `calc(${adjustedSpace} / 2)`,
-          },
         }}
       >
-        {children}
+        {React.Children.map(children, (c, i) => (
+          <Box
+            key={i}
+            __css={{ display: 'flex', margin: `calc(${adjustedSpace} / 2)` }}
+          >
+            {c}
+          </Box>
+        ))}
       </Box>
     )
   }
@@ -31,5 +35,5 @@ export const Cluster = React.forwardRef(
 Cluster.defaultProps = {
   justify: 'flex-start',
   align: 'flex-start',
-  space: 0,
+  space: '0px',
 }
