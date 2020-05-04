@@ -2,12 +2,11 @@
 import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
-import { getChildren, normaliseUnit, applyStyle } from './utils'
+import { normaliseUnit } from './utils'
 
 export const Cluster = React.forwardRef(
   ({ justify, align, space, children, ...props }, ref) => {
     const adjustedSpace = normaliseUnit(space)
-    const childs = getChildren(children)
     return (
       <Box
         ref={ref}
@@ -20,7 +19,7 @@ export const Cluster = React.forwardRef(
           margin: `calc(${adjustedSpace} / 2 * -1)`,
         }}
       >
-        {childs.map((c, i) => (
+        {React.Children.map(children, (c, i) => (
           <Box
             key={i}
             __css={{ display: 'flex', margin: `calc(${adjustedSpace} / 2)` }}

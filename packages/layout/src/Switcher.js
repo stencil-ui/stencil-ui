@@ -2,12 +2,11 @@
 import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
-import { normaliseUnit, getChildren, applyStyle } from './utils'
+import { normaliseUnit } from './utils'
 
 export const Switcher = React.forwardRef(
   ({ threshold, space, limit, children, ...props }, ref) => {
     const adjustedSpace = normaliseUnit(space)
-    const childs = getChildren(children)
 
     // TODO: ensure a unit is provided for space and threshold, e.g. rem, px etc.
     return (
@@ -27,7 +26,7 @@ export const Switcher = React.forwardRef(
           },
         }}
       >
-        {childs.map((c, i) => (
+        {React.Children.map(children, (c, i) => (
           <Box
             key={i}
             __css={{
