@@ -39,14 +39,7 @@ export const withSpaceRem = () => <Grid {...defaultProps(6)} space="3rem" />
 
 export const withSpaceFunction = () => (
   <ThemeProvider theme={defaultTheme}>
-    <Grid
-      {...defaultProps(6)}
-      space={theme => {
-        console.log(theme)
-        console.log(theme.space[2])
-        return theme.space[2]
-      }}
-    />
+    <Grid {...defaultProps(6)} space={theme => theme.space[2]} />
   </ThemeProvider>
 )
 
