@@ -22,6 +22,19 @@ const Paragraphs = () => (
 const defaultProps = {
   children: (
     <React.Fragment>
+      <BorderBox />
+      <BorderBox />
+    </React.Fragment>
+  ),
+}
+
+export const withDefault = () => <Stack {...defaultProps} />
+
+export const withSpace = () => <Stack {...defaultProps} space={4} />
+
+export const withRecursive = () => (
+  <Stack {...defaultProps} recursive={true}>
+    <React.Fragment>
       <Paragraphs />
       <BorderBox>
         <Paragraphs />
@@ -33,11 +46,5 @@ const defaultProps = {
       </BorderBox>
       <Paragraphs />
     </React.Fragment>
-  ),
-}
-
-export const withDefault = () => <Stack {...defaultProps} />
-
-export const withSpace = () => <Stack {...defaultProps} space={4} />
-
-export const withRecursive = () => <Stack {...defaultProps} recursive={true} />
+  </Stack>
+)

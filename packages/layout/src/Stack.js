@@ -33,6 +33,6 @@ export const Stack = React.forwardRef(
 )
 
 Stack.defaultProps = {
-  space: 1,
+  space: '0px',
   recursive: false,
 }

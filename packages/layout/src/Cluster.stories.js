@@ -28,7 +28,7 @@ const defaultProps = {
 
 export const withDefault = () => <Cluster {...defaultProps} />
 
-export const withSpace = () => <Cluster {...defaultProps} space="3rem" />
+export const withSpace = () => <Cluster {...defaultProps} space="1rem" />
 
 export const withJustify = () => <Cluster {...defaultProps} justify="center" />
 
