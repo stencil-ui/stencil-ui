@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1-alpha.3](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.1-alpha.2...@stencil-ui/layout@0.1.1-alpha.3) (2020-05-06)
+
+
+### Bug Fixes
+
+* add support for switcher space function ([#3](https://github.com/stencil-ui/stencil-ui/issues/3)) ([5c33c47](https://github.com/stencil-ui/stencil-ui/commit/5c33c47b9d92f3dd27f8b741ca769ca9c4069ab5))
+
+
+
+
+
 ## [0.1.1-alpha.2](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.1-alpha.1...@stencil-ui/layout@0.1.1-alpha.2) (2020-05-04)
 
 
