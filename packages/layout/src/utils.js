@@ -6,8 +6,8 @@ export const arrayOfSize = size =>
     .map((_, i) => i)
 
 // TODO: convert all unitless values to px
-export const normaliseUnit = value => {
-  const resolved = isFunction(value) ? value() : value
+export const normaliseUnit = theme => value => {
+  const resolved = isFunction(value) ? value(theme) : value
   return resolved === '0' || resolved === 0 ? '0px' : resolved
 }
 
