@@ -9,7 +9,6 @@ export const Switcher = React.forwardRef(
     const { theme } = useThemeUI()
     const adjustedSpace = normaliseUnit(theme)(space)
 
-    // TODO: ensure a unit is provided for space and threshold, e.g. rem, px etc.
     return (
       <Box
         ref={ref}

@@ -1,12 +1,14 @@
 /** @jsx jsx */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
+import { jsx, useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseUnit } from './utils'
 
 export const Cluster = React.forwardRef(
   ({ justify, align, space, children, ...props }, ref) => {
-    const adjustedSpace = normaliseUnit(space)
+    const { theme } = useThemeUI()
+    const adjustedSpace = normaliseUnit(theme)(space)
+
     return (
       <Box
         ref={ref}
