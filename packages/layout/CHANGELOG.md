@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1-alpha.4](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.1-alpha.3...@stencil-ui/layout@0.1.1-alpha.4) (2020-05-06)
+
+
+### Bug Fixes
+
+* add theme to normalise ([#4](https://github.com/stencil-ui/stencil-ui/issues/4)) ([4b28b97](https://github.com/stencil-ui/stencil-ui/commit/4b28b97658c977bb2ecc1ca09b810ac8cecd6361))
+
+
+
+
+
 ## [0.1.1-alpha.3](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.1-alpha.2...@stencil-ui/layout@0.1.1-alpha.3) (2020-05-06)
 
 
