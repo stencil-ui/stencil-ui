@@ -38,7 +38,15 @@ export const withThreshold = () => (
   <Switcher {...defaultProps(3)} threshold="60rem" />
 )
 
-export const withSpace = () => <Switcher {...defaultProps(3)} space="5rem" />
+export const withSpaceFunction = () => (
+  <Switcher space={() => '1rem'}>
+    <BorderBox />
+    <BorderBox />
+    <BorderBox />
+  </Switcher>
+)
+
+export const withFragment = () => <Switcher {...defaultProps(3)} space="5rem" />
 
 export const withLimit2And4Items = () => (
   <Switcher {...defaultProps(4)} limit={2} />
