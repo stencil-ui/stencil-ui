@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
+import { jsx, useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseUnit } from './utils'
 
 export const Switcher = React.forwardRef(
   ({ threshold, space, limit, children, ...props }, ref) => {
-    const adjustedSpace = normaliseUnit(space)
+    const { theme } = useThemeUI()
+    const adjustedSpace = normaliseUnit(theme)(space)
 
     // TODO: ensure a unit is provided for space and threshold, e.g. rem, px etc.
     return (
