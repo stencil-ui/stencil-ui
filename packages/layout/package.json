@@ -28,8 +28,8 @@
   "dependencies": {
     "@theme-ui/components": "^0.3.1",
     "@theme-ui/core": "^0.3.1",
-    "@themeprint/ui": "0.1.1-alpha.2",
-    "@utilz/types": "^0.1.11"
+    "@utilz/types": "^0.1.11",
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
@@ -37,6 +37,7 @@
     "@babel/preset-react": "^7.7.4",
     "@storybook/react": "^5.3.17",
     "@theme-ui/preset-base": "^0.3.0",
+    "@themeprint/ui": "^0.1.1-alpha.1",
     "@utilz/dummy": "^0.1.8",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
