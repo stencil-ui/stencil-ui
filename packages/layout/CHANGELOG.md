@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1-alpha.6](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.1-alpha.5...@stencil-ui/layout@0.1.1-alpha.6) (2020-05-08)
+
+
+### Features
+
+* add cover ([#6](https://github.com/stencil-ui/stencil-ui/issues/6)) ([ed36ab9](https://github.com/stencil-ui/stencil-ui/commit/ed36ab91805718e7def97fdea018495d57bdc2fc))
+* add icon ([#8](https://github.com/stencil-ui/stencil-ui/issues/8)) ([c691e6a](https://github.com/stencil-ui/stencil-ui/commit/c691e6a24792172dee45dce3abecb663aaa0fac1))
+* add overlay ([#7](https://github.com/stencil-ui/stencil-ui/issues/7)) ([fb5822b](https://github.com/stencil-ui/stencil-ui/commit/fb5822b6bc886579f8811b05e5e1a1fc715ed764))
+
+
+
+
+
 ## [0.1.1-alpha.5](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.1-alpha.4...@stencil-ui/layout@0.1.1-alpha.5) (2020-05-06)
 
 
