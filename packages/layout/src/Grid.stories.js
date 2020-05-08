@@ -1,27 +1,19 @@
 /** @jsx jsx */
 import React from 'react'
 import { jsx, ThemeProvider } from '@theme-ui/core'
-import { Box } from '@theme-ui/components'
 import { Grid } from './Grid'
-import { textReact, paragraphs } from '@utilz/dummy'
-import { arrayOfSize } from './utils'
+import { arrayOfSize, BorderBox, Paragraphs } from './utils'
 import { defaultTheme } from '@themeprint/ui'
 
 export default { title: 'Grid' }
-
-const BorderBox = () => (
-  <Box css={{ border: '1px solid #ccc', padding: '10px' }}>
-    {textReact(paragraphs(2)).map(props => (
-      <p css={{ margin: '1rem' }} {...props} />
-    ))}
-  </Box>
-)
 
 const defaultProps = childrenNumber => ({
   children: (
     <React.Fragment>
       {arrayOfSize(childrenNumber).map(i => (
-        <BorderBox key={i} />
+        <BorderBox key={i}>
+          <Paragraphs number={2} />
+        </BorderBox>
       ))}
     </React.Fragment>
   ),

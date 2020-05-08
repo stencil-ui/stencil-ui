@@ -1,14 +1,93 @@
 /** @jsx jsx */
 import { jsx } from '@theme-ui/core'
 import { Cover } from './Cover'
-import { BorderBox, Paragraphs } from './utils'
+import { BorderBox, Paragraphs, Words } from './utils'
 
 export default { title: 'Cover' }
 
-export const withDefault = () => (
-  <Cover>
+const defaultProps = {
+  children: (
     <BorderBox>
       <Paragraphs />
     </BorderBox>
-  </Cover>
+  ),
+}
+
+export const withDefault = () => <Cover {...defaultProps} />
+
+export const withTop = () => (
+  <Cover
+    {...defaultProps}
+    top={
+      <BorderBox>
+        <Words number={1} />
+      </BorderBox>
+    }
+  />
+)
+
+export const withBottom = () => (
+  <Cover
+    {...defaultProps}
+    bottom={
+      <BorderBox>
+        <Words number={1} />
+      </BorderBox>
+    }
+  />
+)
+
+export const withTopAndBottom = () => (
+  <Cover
+    {...defaultProps}
+    top={
+      <BorderBox>
+        <Words number={1} />
+      </BorderBox>
+    }
+    bottom={
+      <BorderBox>
+        <Words number={1} />
+      </BorderBox>
+    }
+  />
+)
+
+export const withSpace = () => (
+  <Cover
+    {...defaultProps}
+    space="2rem"
+    top={
+      <BorderBox>
+        <Words number={1} />
+      </BorderBox>
+    }
+    bottom={
+      <BorderBox>
+        <Words number={1} />
+      </BorderBox>
+    }
+  />
+)
+
+export const withMinHeight = () => (
+  <Cover
+    space="2rem"
+    minHeight="200px"
+    top={
+      <BorderBox>
+        <Words number={1} />
+      </BorderBox>
+    }
+    children={
+      <BorderBox>
+        <Words number={1} />
+      </BorderBox>
+    }
+    bottom={
+      <BorderBox>
+        <Words number={1} />
+      </BorderBox>
+    }
+  />
 )

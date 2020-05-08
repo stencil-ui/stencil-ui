@@ -2,15 +2,10 @@
 import { Fragment } from 'react'
 import { jsx } from '@theme-ui/core'
 import { Stack } from './Stack'
-import { Box } from '@theme-ui/components'
+import { BorderBox } from './utils'
 
 export default { title: 'Stack' }
 
-const BorderBox = ({ children, ...props }) => (
-  <Box {...props} __css={{ border: '1px solid #ccc', padding: '10px' }}>
-    {children}
-  </Box>
-)
 export const withDefault = () => (
   <Stack>
     <BorderBox />
