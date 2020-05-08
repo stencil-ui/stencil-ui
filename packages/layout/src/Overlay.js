@@ -4,7 +4,7 @@ import { jsx, useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseUnit } from './utils'
 
-export const Imposter = React.forwardRef(
+export const Overlay = React.forwardRef(
   ({ breakout, space, fixed, children, ...props }, ref) => {
     const { theme } = useThemeUI()
     const adjustedSpace = normaliseUnit(theme)(space)
@@ -32,7 +32,7 @@ export const Imposter = React.forwardRef(
   }
 )
 
-Imposter.defaultProps = {
+Overlay.defaultProps = {
   breakout: false,
   space: '0px',
   fixed: false,
