@@ -2,25 +2,21 @@
 import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Cluster } from './Cluster'
-import { Box } from '@theme-ui/components'
-import { textReact, words } from '@utilz/dummy'
-import { arrayOfSize } from './utils'
+import { arrayOfSize, BorderBox, Words } from './utils'
 
 export default { title: 'Cluster' }
 
-const BorderBox = () => (
-  <Box css={{ border: '1px solid #ccc', padding: '10px' }}>
-    {textReact(words(1)).map(props => (
-      <p css={{ margin: '1rem' }} {...props} />
-    ))}
-  </Box>
+const Content = props => (
+  <BorderBox {...props}>
+    <Words number={1} />
+  </BorderBox>
 )
 
 const defaultProps = {
   children: (
     <React.Fragment>
       {arrayOfSize(10).map(i => (
-        <BorderBox key={i} />
+        <Content key={i} />
       ))}
     </React.Fragment>
   ),
@@ -50,8 +46,8 @@ export const withUnorderedList = () => (
 
 export const withChildExplicitMargin = () => (
   <Cluster space="1rem">
-    <BorderBox />
-    <BorderBox />
-    <BorderBox sx={{ margin: 0 }} />
+    <Content />
+    <Content />
+    <Content sx={{ margin: 0 }} />
   </Cluster>
 )

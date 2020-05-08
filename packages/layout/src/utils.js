@@ -1,4 +1,8 @@
+/** @jsx jsx */
+import { jsx } from '@theme-ui/core'
+import { Box } from '@theme-ui/components'
 import { isFunction } from '@utilz/types'
+import { textReact, paragraphs, words } from '@utilz/dummy'
 
 export const arrayOfSize = size =>
   Array(size)
@@ -22,4 +26,34 @@ export const applyStyle = (component, style = {}) => {
 
   // TODO: deepmerge
   return { style: { ...(component.props.style || {}), ...style } }
+}
+
+export const BorderBox = ({ children, ...props }) => (
+  <Box {...props} __css={{ border: '1px solid #ccc', padding: '10px' }}>
+    {children}
+  </Box>
+)
+
+export const Paragraphs = ({ number }) => (
+  <Box>
+    {textReact(paragraphs(number)).map(props => (
+      <p css={{ margin: '1rem' }} {...props} />
+    ))}
+  </Box>
+)
+
+Paragraphs.defaultProps = {
+  number: 5,
+}
+
+export const Words = ({ number }) => (
+  <Box>
+    {textReact(words(number)).map(props => (
+      <p css={{ margin: '1rem' }} {...props} />
+    ))}
+  </Box>
+)
+
+Words.defaultProps = {
+  number: 5,
 }

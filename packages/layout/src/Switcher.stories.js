@@ -2,25 +2,22 @@
 import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Switcher } from './Switcher'
-import { Box } from '@theme-ui/components'
-import { textReact, paragraphs } from '@utilz/dummy'
+import { BorderBox, Paragraphs } from './utils'
 import { arrayOfSize } from './utils'
 
 export default { title: 'Switcher' }
 
-const BorderBox = props => (
-  <Box {...props} __css={{ border: '1px solid #ccc', padding: '10px' }}>
-    {textReact(paragraphs(5)).map(props => (
-      <p css={{ margin: '1rem' }} {...props} />
-    ))}
-  </Box>
+const Content = props => (
+  <BorderBox {...props}>
+    <Paragraphs />
+  </BorderBox>
 )
 
 const defaultProps = numberItems => ({
   children: (
     <React.Fragment>
       {arrayOfSize(numberItems).map(i => (
-        <BorderBox key={i} />
+        <Content key={i} />
       ))}
     </React.Fragment>
   ),
@@ -28,9 +25,9 @@ const defaultProps = numberItems => ({
 
 export const withDefault = () => (
   <Switcher>
-    <BorderBox />
-    <BorderBox />
-    <BorderBox />
+    <Content />
+    <Content />
+    <Content />
   </Switcher>
 )
 
@@ -40,9 +37,9 @@ export const withThreshold = () => (
 
 export const withSpaceFunction = () => (
   <Switcher space={() => '1rem'}>
-    <BorderBox />
-    <BorderBox />
-    <BorderBox />
+    <Content />
+    <Content />
+    <Content />
   </Switcher>
 )
 
@@ -58,25 +55,25 @@ export const withLimit2And2Items = () => (
 
 export const withLimit4 = () => (
   <Switcher limit={4}>
-    <BorderBox />
-    <BorderBox />
-    <BorderBox />
-    <BorderBox />
+    <Content />
+    <Content />
+    <Content />
+    <Content />
   </Switcher>
 )
 
 export const withExplictChildMargin = () => (
   <Switcher space="1rem">
-    <BorderBox />
-    <BorderBox />
-    <BorderBox sx={{ margin: 0 }} />
+    <Content />
+    <Content />
+    <Content sx={{ margin: 0 }} />
   </Switcher>
 )
 
 export const withChildStyle = () => (
   <Switcher space="1rem">
-    <BorderBox />
-    <BorderBox />
-    <BorderBox style={{ backgroundColor: '#ccc' }} />
+    <Content />
+    <Content />
+    <Content style={{ backgroundColor: '#ccc' }} />
   </Switcher>
 )
