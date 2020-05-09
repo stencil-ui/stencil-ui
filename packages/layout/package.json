@@ -38,7 +38,7 @@
     "@storybook/react": "^5.3.17",
     "@theme-ui/preset-base": "^0.3.0",
     "@themeprint/ui": "^0.1.1-alpha.1",
-    "@utilz/dummy": "^0.1.8",
+    "@utilz/dummy": "^0.1.9",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "jest": "^25.1.0",
@@ -49,5 +49,6 @@
   },
   "peerDependencies": {
     "react": "*"
-  }
+  },
+  "gitHead": "2b365b11e064666b555f8d53ab2673831f9a19c8"
 }
