@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.1-alpha.7...@stencil-ui/layout@0.1.1) (2020-05-20)
+
+
+### Features
+
+* add center component ([#9](https://github.com/stencil-ui/stencil-ui/issues/9)) ([f69b688](https://github.com/stencil-ui/stencil-ui/commit/f69b688ac9be2f9114153d1abab4b1d3acc7188c))
+
+
+
+
+
 ## [0.1.1-alpha.7](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.1-alpha.6...@stencil-ui/layout@0.1.1-alpha.7) (2020-05-09)
 
 **Note:** Version bump only for package @stencil-ui/layout

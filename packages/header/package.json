@@ -1,6 +1,6 @@
 {
   "name": "@stencil-ui/header",
-  "version": "0.1.1-alpha.1",
+  "version": "0.1.1",
   "description": "Stencil UI header component.",
   "private": true,
   "source": "src/index.js",
