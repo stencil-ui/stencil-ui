@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { Fragment } from 'react'
 import { jsx } from '@theme-ui/core'
+import { Box } from '@theme-ui/components'
 import { Stack } from './Stack'
+import { Center } from './Center'
 import { BorderBox } from './utils'
 
 export default { title: 'Stack' }
@@ -34,4 +36,15 @@ export const withExplictChildMargin = () => (
     <BorderBox />
     <BorderBox sx={{ margin: 0 }} />
   </Stack>
+)
+
+export const withNoStretch = () => (
+  <Box sx={{ border: '1px solid #ccc', height: '400px', width: '400px' }}>
+    <Center>
+      <Stack stretch={false}>
+        <BorderBox />
+        <BorderBox sx={{ margin: 0 }} />
+      </Stack>
+    </Center>
+  </Box>
 )
