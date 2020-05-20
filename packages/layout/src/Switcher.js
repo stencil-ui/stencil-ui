@@ -2,7 +2,7 @@
 import React from 'react'
 import { jsx, useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
-import { normaliseUnit } from './utils'
+import { normaliseUnit, getChildren } from './utils'
 
 export const Switcher = React.forwardRef(
   ({ threshold, space, limit, children, ...props }, ref) => {
@@ -26,7 +26,7 @@ export const Switcher = React.forwardRef(
           },
         }}
       >
-        {React.Children.map(children, (c, i) => (
+        {React.Children.map(getChildren(children), (c, i) => (
           <Box
             key={i}
             __css={{

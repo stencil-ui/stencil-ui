@@ -3,6 +3,7 @@ import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { isFunction } from '@utilz/types'
 import { textReact, paragraphs, words } from '@utilz/dummy'
+import { isFragment } from 'react-is'
 
 export const arrayOfSize = size =>
   Array(size)
@@ -26,6 +27,14 @@ export const applyStyle = (component, style = {}) => {
 
   // TODO: deepmerge
   return { style: { ...(component.props.style || {}), ...style } }
+}
+
+export const getChildren = children => {
+  if (isFragment(children)) {
+    return children.props.children
+  }
+
+  return children
 }
 
 export const BorderBox = ({ children, ...props }) => (

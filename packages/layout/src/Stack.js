@@ -2,6 +2,7 @@
 import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
+import { getChildren } from './utils'
 
 export const Stack = React.forwardRef(
   ({ space, stretch, children, ...props }, ref) => (
@@ -18,7 +19,7 @@ export const Stack = React.forwardRef(
           : {}),
       }}
     >
-      {React.Children.map(children, (c, i) => (
+      {React.Children.map(getChildren(children), (c, i) => (
         <Box key={i} __css={{ ...(i === 0 ? {} : { marginTop: space }) }}>
           {c}
         </Box>
