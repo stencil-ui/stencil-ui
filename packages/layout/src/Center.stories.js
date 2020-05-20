@@ -2,32 +2,24 @@
 import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Center } from './Center'
-import { Box } from '@theme-ui/components'
-import { base as theme } from '@theme-ui/preset-base'
-
-import { textReact, paragraphs } from '@utilz/dummy'
+import { arrayOfSize, BorderBox, Paragraphs } from './utils'
 
 export default { title: 'Center' }
 
-const defaultProps = {
+const defaultProps = childrenNumber => ({
   children: (
     <React.Fragment>
-      {textReact(paragraphs(5)).map(props => (
-        <p {...props} />
+      {arrayOfSize(childrenNumber).map(i => (
+        <BorderBox key={i}>
+          <Paragraphs number={2} />
+        </BorderBox>
       ))}
-      <Box css={{ border: '1px solid #ccc', padding: 4 }}>Content</Box>
     </React.Fragment>
   ),
-}
+})
 
-export const withDefault = () => <Center {...defaultProps} />
-
-export const withMaxWidth = () => <Center {...defaultProps} maxWidth="20ch" />
-
-export const withGutter = () => <Center {...defaultProps} gutter={0} />
-
-export const withIntrinsic = () => <Center {...defaultProps} intrinsic={true} />
+export const withDefault = () => <Center {...defaultProps(1)} />
 
 export const withCenterText = () => (
-  <Center {...defaultProps} centerText={true} />
+  <Center {...defaultProps(1)} centerText={true} />
 )
