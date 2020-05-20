@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.2...@stencil-ui/layout@0.1.3) (2020-05-20)
+
+
+### Bug Fixes
+
+* add fragment support ([#11](https://github.com/stencil-ui/stencil-ui/issues/11)) ([3b592a5](https://github.com/stencil-ui/stencil-ui/commit/3b592a52d1f8a40bc7ad77f5897f68b6a90df486))
+
+
+
+
+
 ## [0.1.2](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.1...@stencil-ui/layout@0.1.2) (2020-05-20)
 
 **Note:** Version bump only for package @stencil-ui/layout
