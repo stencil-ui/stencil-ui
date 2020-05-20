@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react'
+import React, { Fragment } from 'react'
 import { jsx } from '@theme-ui/core'
 import { Cluster } from './Cluster'
 import { arrayOfSize, BorderBox, Words } from './utils'
@@ -49,5 +49,15 @@ export const withChildExplicitMargin = () => (
     <Content />
     <Content />
     <Content sx={{ margin: 0 }} />
+  </Cluster>
+)
+
+export const withFragment = () => (
+  <Cluster space="1rem">
+    <Fragment>
+      <Content />
+      <Content />
+      <Content sx={{ margin: 0 }} />
+    </Fragment>
   </Cluster>
 )
