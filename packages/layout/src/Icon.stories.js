@@ -2,8 +2,9 @@
 import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { Icon } from './Icon'
+import { withTheme } from './with-theme'
 
-export default { title: 'Icon' }
+export default { title: 'Icon', decorators: [withTheme()] }
 
 const Svg = ({
   width,

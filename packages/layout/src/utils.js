@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@theme-ui/core'
+import { css } from '@theme-ui/css'
 import { Box } from '@theme-ui/components'
-import { isFunction } from '@utilz/types'
+import { unit } from '@themeprint/ui'
 import { textReact, paragraphs, words } from '@utilz/dummy'
 import { isFragment } from 'react-is'
 
@@ -10,10 +11,9 @@ export const arrayOfSize = size =>
     .fill()
     .map((_, i) => i)
 
-// TODO: convert all unitless values to px
-export const normaliseUnit = theme => value => {
-  const resolved = isFunction(value) ? value(theme) : value
-  return resolved === '0' || resolved === 0 ? '0px' : resolved
+export const normaliseSpace = theme => space => {
+  const { margin } = css({ margin: space })(theme)
+  return unit(margin).css()
 }
 
 export const applyStyle = (component, style = {}) => {

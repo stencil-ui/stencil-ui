@@ -3,8 +3,9 @@ import React, { Fragment } from 'react'
 import { jsx } from '@theme-ui/core'
 import { Cluster } from './Cluster'
 import { arrayOfSize, BorderBox, Words } from './utils'
+import { withTheme } from './with-theme'
 
-export default { title: 'Cluster' }
+export default { title: 'Cluster', decorators: [withTheme()] }
 
 const Content = props => (
   <BorderBox {...props}>
@@ -61,3 +62,15 @@ export const withFragment = () => (
     </Fragment>
   </Cluster>
 )
+
+export const withStringSpace = () => <Cluster {...defaultProps} space="l" />
+
+withStringSpace.story = {
+  decorators: [
+    withTheme({
+      space: {
+        l: 24,
+      },
+    }),
+  ],
+}

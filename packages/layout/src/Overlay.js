@@ -2,12 +2,13 @@
 import React from 'react'
 import { jsx, useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
-import { normaliseUnit } from './utils'
+import { normaliseSpace } from './utils'
 
 export const Overlay = React.forwardRef(
   ({ breakout, space, fixed, children, ...props }, ref) => {
     const { theme } = useThemeUI()
-    const adjustedSpace = normaliseUnit(theme)(space)
+    const adjustedSpace = normaliseSpace(theme)(space)
+
     return (
       <Box
         ref={ref}

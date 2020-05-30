@@ -4,8 +4,9 @@ import { jsx, ThemeProvider } from '@theme-ui/core'
 import { Grid } from './Grid'
 import { arrayOfSize, BorderBox, Paragraphs } from './utils'
 import { defaultTheme } from '@themeprint/ui'
+import { withTheme } from './with-theme'
 
-export default { title: 'Grid' }
+export default { title: 'Grid', decorators: [withTheme()] }
 
 const defaultProps = childrenNumber => ({
   children: (
