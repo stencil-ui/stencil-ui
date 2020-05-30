@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.3...@stencil-ui/layout@0.1.4) (2020-05-30)
+
+
+### Bug Fixes
+
+* normalise space ([#12](https://github.com/stencil-ui/stencil-ui/issues/12)) ([54039a4](https://github.com/stencil-ui/stencil-ui/commit/54039a4c604d203b9267757674618cc35d58aa74))
+
+
+
+
+
 ## [0.1.3](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.2...@stencil-ui/layout@0.1.3) (2020-05-20)
 
 
