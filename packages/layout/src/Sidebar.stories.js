@@ -3,9 +3,11 @@ import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { Sidebar } from './Sidebar'
 import { textReact, paragraphs } from '@utilz/dummy'
+import { withTheme } from './with-theme'
 
 export default {
   title: 'Sidebar',
+  decorators: [withTheme()],
 }
 
 const Padded = ({ title, children, color }) => (

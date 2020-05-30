@@ -4,8 +4,9 @@ import { jsx } from '@theme-ui/core'
 import { Switcher } from './Switcher'
 import { BorderBox, Paragraphs } from './utils'
 import { arrayOfSize } from './utils'
+import { withTheme } from './with-theme'
 
-export default { title: 'Switcher' }
+export default { title: 'Switcher', decorators: [withTheme()] }
 
 const Content = props => (
   <BorderBox {...props}>

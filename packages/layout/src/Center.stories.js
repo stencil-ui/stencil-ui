@@ -3,8 +3,9 @@ import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Center } from './Center'
 import { arrayOfSize, BorderBox, Paragraphs } from './utils'
+import { withTheme } from './with-theme'
 
-export default { title: 'Center' }
+export default { title: 'Center', decorators: [withTheme()] }
 
 const defaultProps = childrenNumber => ({
   children: (

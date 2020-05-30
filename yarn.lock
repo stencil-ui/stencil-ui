@@ -2656,13 +2656,15 @@
   resolved "https://registry.yarnpkg.com/@theme-ui/preset-base/-/preset-base-0.3.0.tgz#853a78195beead04ece4391c5672d690899bec47"
   integrity sha512-bFCYoxfe/Ugr5k5BEy3Gv5jg8+idZHWDt/NM95jgla4qITlaOAMuEL6afoQ5HXbJjp5TnZFZ73qO6cKI8/BFfQ==
 
-"@themeprint/ui@^0.1.1-alpha.1":
-  version "0.1.1-alpha.1"
-  resolved "https://registry.yarnpkg.com/@themeprint/ui/-/ui-0.1.1-alpha.1.tgz#89198f9a72d2b9e4eaf03b0c4a98b1f6b204fabc"
-  integrity sha512-Q6x9eHS8SyHHg1MKKVbApFHIFR0tbQtEzEciJB0BrMdSE74L7NbEzYEPZ0hNlYCGZpsxLY8pz74I9ZmxWCxoyg==
+"@themeprint/ui@0.1.1-alpha.7":
+  version "0.1.1-alpha.7"
+  resolved "https://registry.yarnpkg.com/@themeprint/ui/-/ui-0.1.1-alpha.7.tgz#78719aea2064ffbd1a45c54ca09a25176f07d774"
+  integrity sha512-DbvKIqjAJthKCJp0Q8mY1ouIajsUPN549dZJNrvnnVJZon5+6DFl3my64NaPVNAu9tpc2HKqWC9vfK4mOBtWPA==
   dependencies:
     "@theme-ui/core" "^0.3.1"
+    "@theme-ui/css" "^0.3.1"
     "@utilz/deepmerge" "^0.1.13"
+    "@utilz/get" "^0.1.1"
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -2927,6 +2929,11 @@
     "@utilz/types" "^0.1.11"
     lorem-ipsum "^2.0.3"
     shortid "^2.2.15"
+
+"@utilz/get@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@utilz/get/-/get-0.1.1.tgz#d29d4c61a3a1347c6d09d2a02282b04a8681ec20"
+  integrity sha512-3RDilpi2/yWvw8z12BjYo0gmqtudkML6ym2jQ9c3PQ8Viv56Por6RgYzXkfhzNVP3RuX6w3mN/qn9MuKeWIAzg==
 
 "@utilz/types@^0.1.11":
   version "0.1.11"

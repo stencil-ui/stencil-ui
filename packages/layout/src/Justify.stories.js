@@ -3,10 +3,10 @@ import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Justify } from './Justify'
 import { Box } from '@theme-ui/components'
-
+import { withTheme } from './with-theme'
 import { textReact, paragraphs } from '@utilz/dummy'
 
-export default { title: 'Justify' }
+export default { title: 'Justify', decorators: [withTheme()] }
 
 const defaultProps = {
   children: (

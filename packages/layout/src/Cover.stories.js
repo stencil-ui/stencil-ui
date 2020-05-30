@@ -2,8 +2,9 @@
 import { jsx } from '@theme-ui/core'
 import { Cover } from './Cover'
 import { BorderBox, Paragraphs, Words } from './utils'
+import { withTheme } from './with-theme'
 
-export default { title: 'Cover' }
+export default { title: 'Cover', decorators: [withTheme()] }
 
 const defaultProps = {
   children: (

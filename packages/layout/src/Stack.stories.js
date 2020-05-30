@@ -5,8 +5,9 @@ import { Box } from '@theme-ui/components'
 import { Stack } from './Stack'
 import { Center } from './Center'
 import { BorderBox } from './utils'
+import { withTheme } from './with-theme'
 
-export default { title: 'Stack' }
+export default { title: 'Stack', decorators: [withTheme()] }
 
 export const withDefault = () => (
   <Stack>
