@@ -4,12 +4,13 @@ import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 
 export const Flex = React.forwardRef(
-  ({ align, justify, children, ...props }, ref) => (
+  ({ direction, align, justify, children, ...props }, ref) => (
     <Box
       ref={ref}
       {...props}
       __css={{
         display: 'flex',
+        flexDirection: direction,
         alignItems: align,
         justifyContent: justify,
       }}
@@ -20,6 +21,7 @@ export const Flex = React.forwardRef(
 )
 
 Flex.defaultProps = {
+  direction: 'row',
   align: 'stretch',
   justify: 'flex-start',
 }
