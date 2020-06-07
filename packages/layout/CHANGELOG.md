@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.4...@stencil-ui/layout@0.1.5) (2020-06-07)
+
+
+### Features
+
+* add flex direction ([#13](https://github.com/stencil-ui/stencil-ui/issues/13)) ([76729dd](https://github.com/stencil-ui/stencil-ui/commit/76729dd712ee03c2282092b510e3598266a1a261))
+
+
+
+
+
 ## [0.1.4](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.3...@stencil-ui/layout@0.1.4) (2020-05-30)
 
 
