@@ -21,8 +21,8 @@
     "@stencil-ui/header": "^0.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@storybook/react": "^5.3.18",
+    "@babel/core": "^7.10.3",
+    "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0"
   }
 }
