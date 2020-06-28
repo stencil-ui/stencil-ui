@@ -37,7 +37,7 @@ const Svg = ({
   </Box>
 )
 
-const PinIcon = props => (
+const PinIcon = (props) => (
   <Svg {...props} width={12} height={16} viewBoxWidth={384} viewBoxHeight={512}>
     <path
       fill="currentColor"
@@ -72,6 +72,12 @@ export const withLabel = () => (
 
 export const withAlign = () => (
   <Icon align="center">
+    <PinIcon /> Address
+  </Icon>
+)
+
+export const withWidthHeight = () => (
+  <Icon align="center" width="2rem" height="2rem">
     <PinIcon /> Address
   </Icon>
 )

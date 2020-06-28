@@ -5,7 +5,7 @@ import { Box } from '@theme-ui/components'
 import { normaliseSpace } from './utils'
 
 export const Icon = React.forwardRef(
-  ({ space, label, align, children, ...props }, ref) => {
+  ({ space, label, align, width, height, children, ...props }, ref) => {
     const { theme } = useThemeUI()
     const adjustedSpace = normaliseSpace(theme)(space)
 
@@ -20,10 +20,8 @@ export const Icon = React.forwardRef(
           alignItems: align,
           '> svg': {
             marginInlineEnd: adjustedSpace,
-            height: '0.75em',
-            // height: '1cap',
-            width: '0.75em',
-            // width: '1cap',
+            height,
+            width,
           },
         }}
       >
@@ -37,4 +35,6 @@ Icon.defaultProps = {
   space: '0px',
   label: undefined,
   align: 'baseline',
+  height: '1rem',
+  width: '1rem',
 }

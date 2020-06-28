@@ -26,15 +26,15 @@
     "access": "public"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
-    "@babel/preset-react": "^7.7.4",
-    "@storybook/react": "^5.3.17",
-    "babel-jest": "^25.1.0",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "@storybook/react": "^5.3.19",
+    "babel-jest": "^26.1.0",
     "babel-loader": "^8.0.6",
-    "jest": "^25.1.0",
-    "microbundle": "^0.11.0",
-    "prettier": "^1.19.1",
+    "jest": "^26.1.0",
+    "microbundle": "^0.12.2",
+    "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1"
   },
   "peerDependencies": {
