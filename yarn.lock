@@ -2920,6 +2920,14 @@
     "@utilz/types" "^0.1.11"
     deepmerge "^4.2.2"
 
+"@utilz/deepmerge@^0.1.15":
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/@utilz/deepmerge/-/deepmerge-0.1.15.tgz#2ba8065e9dc441da5ac00b3f20b783b1e1734950"
+  integrity sha512-Ddw5Wy+QPjUvAugjSNOgFgrULOuN7Vgz9V0m/rOi0p/4aRgeJz0mEGmeln0PsX9NJACdo406inTBbIwoXJV8Bw==
+  dependencies:
+    "@utilz/types" "^0.1.13"
+    deepmerge "^4.2.2"
+
 "@utilz/dummy@^0.1.9":
   version "0.1.9"
   resolved "https://registry.yarnpkg.com/@utilz/dummy/-/dummy-0.1.9.tgz#8d7a2e798dea15541296e5393dc18aa2c55790ee"
@@ -2939,6 +2947,11 @@
   version "0.1.11"
   resolved "https://registry.yarnpkg.com/@utilz/types/-/types-0.1.11.tgz#74e3269cdc9f0da1ed96b1feb1c33e5fc83a5a2a"
   integrity sha512-VwEuaY9IWiTcG97PE8Tqhhj7rak64v/IK+Id4gbCJjukIM0Q1jUzPySwa2DF+uJkPq0IDo+xkNvwfb+XLsqDmg==
+
+"@utilz/types@^0.1.13":
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/@utilz/types/-/types-0.1.13.tgz#03ae6d475a98fdbe7592a0c077a1a7eaa5f9667f"
+  integrity sha512-5p2/nnq2+AggeNqYKEPGZ1Htyc+rhZFduHGciBMXejkcZ5db4TkvtH8rJnEXCyE45YUr35KBsTCY2BFlPK70IQ==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"

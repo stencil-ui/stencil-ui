@@ -41,6 +41,7 @@
     "@storybook/react": "^5.3.17",
     "@theme-ui/preset-base": "^0.3.0",
     "@themeprint/ui": "^0.1.1-alpha.1",
+    "@utilz/deepmerge": "^0.1.15",
     "@utilz/dummy": "^0.1.9",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
