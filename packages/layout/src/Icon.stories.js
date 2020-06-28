@@ -4,7 +4,16 @@ import { Box } from '@theme-ui/components'
 import { Icon } from './Icon'
 import { withTheme } from './with-theme'
 
-export default { title: 'Icon', decorators: [withTheme()] }
+export default {
+  title: 'Icon',
+  decorators: [
+    withTheme({
+      space: {
+        m: '4rem',
+      },
+    }),
+  ],
+}
 
 const Svg = ({
   width,
@@ -45,6 +54,12 @@ export const withDefault = () => (
 
 export const withSpace = () => (
   <Icon space="1rem">
+    <PinIcon /> Address
+  </Icon>
+)
+
+export const withNamedSpace = () => (
+  <Icon space="m">
     <PinIcon /> Address
   </Icon>
 )
