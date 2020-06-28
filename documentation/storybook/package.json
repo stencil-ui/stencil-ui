@@ -1,6 +1,6 @@
 {
   "name": "documentation-storybook",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Storybook.",
   "private": true,
   "license": "MIT",
@@ -18,7 +18,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@stencil-ui/header": "^0.1.1"
+    "@stencil-ui/header": "^0.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
