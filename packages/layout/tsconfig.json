@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
+    "target": "es5",
     "outDir": "dist",
     "module": "esnext",
-    "lib": ["dom", "esnext"],
+    "lib": ["dom", "es5", "scripthost", "es2015.promise"],
     "moduleResolution": "node",
     "jsx": "react",
     "sourceMap": true,
