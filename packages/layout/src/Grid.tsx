@@ -1,14 +1,23 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 
+export interface GridProps {
+  space?: string | number
+  minWidth?: string | number
+  children: React.ReactNode
+  [x: string]: unknown
+}
+
 export const Grid = React.forwardRef(
-  ({ space, minWidth, children, ...props }, ref) => (
+  (
+    { space, minWidth, children, ...props }: GridProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => (
     <Box
       ref={ref}
       {...props}
-      __css={{
+      css={{
         display: 'grid',
         gridGap: space,
         alignContent: 'start',

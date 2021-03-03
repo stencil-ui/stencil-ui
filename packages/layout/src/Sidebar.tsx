@@ -1,10 +1,30 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 
+export interface SidebarProps {
+  sidebar: React.ReactNode
+  content: React.ReactNode
+  sidebarWidth: string | number
+  stretch?: boolean
+  space?: string | number
+  side: 'left' | 'right'
+  [x: string]: unknown
+}
+
 export const Sidebar = React.forwardRef(
-  ({ sidebar, sidebarWidth, stretch, content, side, space, ...props }, ref) => {
+  (
+    {
+      sidebar,
+      sidebarWidth,
+      stretch,
+      content,
+      side,
+      space,
+      ...props
+    }: SidebarProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => {
     const isSidebarLeft = side === 'left'
 
     const sidebarStyle = {
@@ -24,22 +44,22 @@ export const Sidebar = React.forwardRef(
       <Box
         ref={ref}
         {...props}
-        __css={{
+        css={{
           overflow: 'hidden',
         }}
       >
         <Box
-          __css={{
+          css={{
             display: 'flex',
             flexWrap: 'wrap',
-            alignItems: !stretch ? 'flex-start' : null,
+            alignItems: !stretch ? 'flex-start' : undefined,
             margin: `calc(${space} / 2 * -1)`,
           }}
         >
-          <Box __css={isSidebarLeft ? sidebarStyle : contentStyle}>
+          <Box css={isSidebarLeft ? sidebarStyle : contentStyle}>
             {isSidebarLeft ? sidebar : content}
           </Box>
-          <Box __css={isSidebarLeft ? contentStyle : sidebarStyle}>
+          <Box css={isSidebarLeft ? contentStyle : sidebarStyle}>
             {isSidebarLeft ? content : sidebar}
           </Box>
         </Box>

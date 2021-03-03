@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import { jsx } from '@theme-ui/core'
 import { Frame } from './Frame'
 import { withTheme } from './with-theme'

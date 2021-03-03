@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React, { Fragment } from 'react'
 import { jsx } from '@theme-ui/core'
 import { Cluster } from './Cluster'
@@ -7,7 +7,7 @@ import { withTheme } from './with-theme'
 
 export default { title: 'Cluster', decorators: [withTheme()] }
 
-const Content = props => (
+const Content = (props) => (
   <BorderBox {...props}>
     <Words number={1} />
   </BorderBox>
@@ -16,7 +16,7 @@ const Content = props => (
 const defaultProps = {
   children: (
     <React.Fragment>
-      {arrayOfSize(10).map(i => (
+      {arrayOfSize(10).map((i) => (
         <Content key={i} />
       ))}
     </React.Fragment>
@@ -39,7 +39,7 @@ export const withAlignStretch = () => (
 
 export const withUnorderedList = () => (
   <Cluster as="ul" space="1rem" sx={{ listStyleType: 'none' }}>
-    {arrayOfSize(10).map(i => (
+    {arrayOfSize(10).map((i) => (
       <li key={i}>{`List item ${i + 1}`}</li>
     ))}
   </Cluster>

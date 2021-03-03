@@ -1,6 +1,6 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx, ThemeProvider } from '@theme-ui/core'
+import { ThemeProvider } from '@theme-ui/core'
 import { Grid } from './Grid'
 import { arrayOfSize, BorderBox, Paragraphs } from './utils'
 import { defaultTheme } from '@themeprint/ui'
@@ -8,10 +8,10 @@ import { withTheme } from './with-theme'
 
 export default { title: 'Grid', decorators: [withTheme()] }
 
-const defaultProps = childrenNumber => ({
+const defaultProps = (childrenNumber) => ({
   children: (
     <React.Fragment>
-      {arrayOfSize(childrenNumber).map(i => (
+      {arrayOfSize(childrenNumber).map((i) => (
         <BorderBox key={i}>
           <Paragraphs number={2} />
         </BorderBox>
@@ -32,7 +32,7 @@ export const withSpaceRem = () => <Grid {...defaultProps(6)} space="3rem" />
 
 export const withSpaceFunction = () => (
   <ThemeProvider theme={defaultTheme}>
-    <Grid {...defaultProps(6)} space={theme => theme.space[2]} />
+    <Grid {...defaultProps(6)} space={(theme) => theme.space[2]} />
   </ThemeProvider>
 )
 

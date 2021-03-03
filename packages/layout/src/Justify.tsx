@@ -1,15 +1,33 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 
+export interface JustifyProps {
+  maxWidth?: string | number
+  gutter?: string | number
+  intrinsic?: boolean
+  centerText?: boolean
+  children: React.ReactNode
+  [x: string]: unknown
+}
+
 export const Justify = React.forwardRef(
-  ({ maxWidth, gutter, intrinsic, centerText, children, ...props }, ref) => {
+  (
+    {
+      maxWidth,
+      gutter,
+      intrinsic,
+      centerText,
+      children,
+      ...props
+    }: JustifyProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => {
     return (
       <Box
         ref={ref}
         {...props}
-        __css={{
+        css={{
           maxWidth,
           marginLeft: 'auto',
           marginRight: 'auto',

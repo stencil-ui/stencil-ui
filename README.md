@@ -1,2 +1,5 @@
 # stencil-ui
-Stenciled React components
+
+Theme UI compatible React components.
+
+[Layout components](./packages/layout/README.md)

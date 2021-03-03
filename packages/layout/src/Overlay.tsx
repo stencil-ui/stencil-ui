@@ -1,19 +1,30 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx, useThemeUI } from '@theme-ui/core'
+import { useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseSpace } from './utils'
 
+export interface OverlayProps {
+  breakout?: boolean
+  space?: string | number
+  fixed?: boolean
+  children: React.ReactNode
+  [x: string]: unknown
+}
+
 export const Overlay = React.forwardRef(
-  ({ breakout, space, fixed, children, ...props }, ref) => {
+  (
+    { breakout, space, fixed, children, ...props }: OverlayProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => {
     const { theme } = useThemeUI()
-    const adjustedSpace = normaliseSpace(theme)(space)
+    const adjustedSpace = space ? normaliseSpace(theme)(space) : '0px'
 
     return (
       <Box
         ref={ref}
         {...props}
-        __css={{
+        css={{
           position: fixed ? 'fixed' : 'absolute',
           top: '50%',
           left: '50%',

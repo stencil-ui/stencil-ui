@@ -1,6 +1,5 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import { Fragment } from 'react'
-import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { Stack } from './Stack'
 import { Center } from './Center'

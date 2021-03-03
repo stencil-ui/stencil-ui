@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
 import { jsx } from '@theme-ui/core'
 import { Center } from './Center'
@@ -7,10 +7,10 @@ import { withTheme } from './with-theme'
 
 export default { title: 'Center', decorators: [withTheme()] }
 
-const defaultProps = childrenNumber => ({
+const defaultProps = (childrenNumber) => ({
   children: (
     <React.Fragment>
-      {arrayOfSize(childrenNumber).map(i => (
+      {arrayOfSize(childrenNumber).map((i) => (
         <BorderBox key={i}>
           <Paragraphs number={2} />
         </BorderBox>

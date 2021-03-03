@@ -1,14 +1,22 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
 import { Flex } from './Flex'
 
+export interface CenterProps {
+  children: React.ReactNode
+  centerText?: boolean
+  [x: string]: unknown
+}
+
 export const Center = React.forwardRef(
-  ({ children, centerText, ...props }, ref) => (
+  (
+    { children, centerText, ...props }: CenterProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => (
     <Flex
       ref={ref}
       {...props}
-      sx={{
+      css={{
         ...(centerText ? { textAlign: 'center' } : {}),
       }}
       align="center"

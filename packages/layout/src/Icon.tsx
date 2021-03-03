@@ -1,13 +1,26 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx, useThemeUI } from '@theme-ui/core'
+import { useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseSpace } from './utils'
 
+export interface IconProps {
+  space?: string | number
+  label?: string
+  align?: string // TODO: type
+  width?: string | number
+  height?: string | number
+  children: React.ReactNode
+  [x: string]: unknown
+}
+
 export const Icon = React.forwardRef(
-  ({ space, label, align, width, height, children, ...props }, ref) => {
+  (
+    { space, label, align, width, height, children, ...props }: IconProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => {
     const { theme } = useThemeUI()
-    const adjustedSpace = normaliseSpace(theme)(space)
+    const adjustedSpace = space ? normaliseSpace(theme)(space) : '0px'
 
     return (
       <Box
@@ -15,7 +28,7 @@ export const Icon = React.forwardRef(
         {...props}
         role={label ? 'img' : undefined}
         aria-label={label}
-        __css={{
+        css={{
           display: 'inline-flex',
           alignItems: align,
           '> svg': {
