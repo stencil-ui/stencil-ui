@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import { jsx } from '@theme-ui/core'
 import { Cover } from './Cover'
 import { BorderBox, Paragraphs, Words } from './utils'

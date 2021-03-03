@@ -1,6 +1,5 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
 import { Switcher } from './Switcher'
 import { BorderBox, Paragraphs } from './utils'
 import { arrayOfSize } from './utils'
@@ -8,16 +7,16 @@ import { withTheme } from './with-theme'
 
 export default { title: 'Switcher', decorators: [withTheme()] }
 
-const Content = props => (
+const Content = (props) => (
   <BorderBox {...props}>
     <Paragraphs />
   </BorderBox>
 )
 
-const defaultProps = numberItems => ({
+const defaultProps = (numberItems) => ({
   children: (
     <React.Fragment>
-      {arrayOfSize(numberItems).map(i => (
+      {arrayOfSize(numberItems).map((i) => (
         <Content key={i} />
       ))}
     </React.Fragment>

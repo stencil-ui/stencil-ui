@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@theme-ui/core'
+/** @jsxImportSource @theme-ui/core */
 import { Box } from '@theme-ui/components'
 import { Overlay } from './Overlay'
 import { BorderBox, Paragraphs } from './utils'

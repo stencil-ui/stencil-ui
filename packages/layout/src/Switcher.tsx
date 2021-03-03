@@ -1,19 +1,30 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx, useThemeUI } from '@theme-ui/core'
+import { useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseSpace, getChildren } from './utils'
 
+export interface SwitchProps {
+  threshold?: string | number
+  space?: string | number
+  limit?: number
+  children: React.ReactNode
+  [x: string]: unknown
+}
+
 export const Switcher = React.forwardRef(
-  ({ threshold, space, limit, children, ...props }, ref) => {
+  (
+    { threshold, space, limit, children, ...props }: SwitchProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => {
     const { theme } = useThemeUI()
-    const adjustedSpace = normaliseSpace(theme)(space)
+    const adjustedSpace = space ? normaliseSpace(theme)(space) : '0px'
 
     return (
       <Box
         ref={ref}
         {...props}
-        __css={{
+        css={{
           display: 'flex',
           flexWrap: 'wrap',
           overflow: 'hidden',
@@ -29,7 +40,7 @@ export const Switcher = React.forwardRef(
         {React.Children.map(getChildren(children), (c, i) => (
           <Box
             key={i}
-            __css={{
+            css={{
               display: 'flex',
               margin: `calc(${adjustedSpace} / 2)`,
               flexBasis: `calc((${threshold} - (100% - ${adjustedSpace})) * 999)`,

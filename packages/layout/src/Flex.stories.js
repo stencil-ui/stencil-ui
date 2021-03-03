@@ -1,4 +1,4 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import { jsx } from '@theme-ui/core'
 import { Flex } from './Flex'
 import { withTheme } from './with-theme'

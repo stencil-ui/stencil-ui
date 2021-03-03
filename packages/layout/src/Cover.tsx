@@ -1,16 +1,27 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import PropTypes from 'prop-types'
 
+export interface CoverProps {
+  space?: string | number
+  minHeight?: string | number
+  top?: React.ReactNode
+  bottom?: React.ReactNode
+  children: React.ReactNode
+  [x: string]: unknown
+}
+
 export const Cover = React.forwardRef(
-  ({ space, minHeight, top, children, bottom, ...props }, ref) => {
+  (
+    { space, minHeight, top, children, bottom, ...props }: CoverProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => {
     return (
       <Box
         ref={ref}
         {...props}
-        __css={{
+        css={{
           display: 'flex',
           flexDirection: 'column',
           minHeight,
@@ -18,7 +29,7 @@ export const Cover = React.forwardRef(
       >
         {top && (
           <Box
-            __css={{
+            css={{
               marginTop: 0,
               marginBottom: space,
             }}
@@ -27,7 +38,7 @@ export const Cover = React.forwardRef(
           </Box>
         )}
         <Box
-          __css={{
+          css={{
             marginTop: 'auto',
             marginBottom: 'auto',
           }}
@@ -36,7 +47,7 @@ export const Cover = React.forwardRef(
         </Box>
         {bottom && (
           <Box
-            __css={{
+            css={{
               marginTop: space,
               marginBottom: 0,
             }}

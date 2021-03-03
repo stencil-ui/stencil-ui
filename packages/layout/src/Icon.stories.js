@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@theme-ui/core'
+/** @jsxImportSource @theme-ui/core */
 import { Box } from '@theme-ui/components'
 import { Icon } from './Icon'
 import { withTheme } from './with-theme'
@@ -24,8 +23,7 @@ const Svg = ({
   ...props
 }) => (
   <Box
-    as="svg"
-    __css={{
+    css={{
       minWidth: width,
     }}
     {...props}

@@ -1,6 +1,5 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
 import { Justify } from './Justify'
 import { Box } from '@theme-ui/components'
 import { withTheme } from './with-theme'
@@ -11,7 +10,7 @@ export default { title: 'Justify', decorators: [withTheme()] }
 const defaultProps = {
   children: (
     <React.Fragment>
-      {textReact(paragraphs(5)).map(props => (
+      {textReact(paragraphs(5)).map((props) => (
         <p {...props} />
       ))}
       <Box css={{ border: '1px solid #ccc', padding: 4 }}>Content</Box>

@@ -2,9 +2,11 @@
   "name": "@stencil-ui/layout",
   "version": "0.1.7",
   "description": "Stencil UI layout components.",
-  "source": "src/index.js",
+  "source": "src/index.ts",
   "main": "dist/layout.js",
-  "module": "dist/layout.esm.js",
+  "exports": "./dist/layout.modern.js",
+  "module": "dist/layout.module.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -14,8 +16,8 @@
   "homepage": "https://github.com/stencil-ui/stencil-ui/tree/master/packages/layout#readme",
   "scripts": {
     "clean": "yarn cache clean",
-    "prepare": "microbundle --no-compress -o dist",
-    "watch": "microbundle watch --no-compress -o dist",
+    "prepare": "microbundle --jsx React.createElement",
+    "watch": "microbundle --jsx React.createElement watch",
     "storybook:clean": "rm -rf node_modules/.cache",
     "storybook": "yarn storybook:clean && start-storybook",
     "test": "jest",
@@ -26,28 +28,19 @@
     "access": "public"
   },
   "dependencies": {
-    "@theme-ui/components": "^0.3.1",
-    "@theme-ui/core": "^0.3.1",
-    "@theme-ui/css": "^0.3.1",
-    "@themeprint/ui": "0.1.1-alpha.7",
-    "@utilz/types": "^0.1.13",
-    "prop-types": "^15.7.2",
-    "react-is": "^16.13.1"
+    "@theme-ui/components": "0.6.0-alpha.7",
+    "@theme-ui/core": "0.6.0-alpha.7",
+    "@theme-ui/css": "0.6.0-alpha.7",
+    "@themeprint/ui": "^0.1.4",
+    "react-is": "^17.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
-    "@babel/preset-react": "^7.10.1",
-    "@storybook/react": "^5.3.19",
-    "@theme-ui/preset-base": "^0.3.0",
-    "@utilz/dummy": "^0.1.11",
-    "babel-jest": "^26.1.0",
-    "babel-loader": "^8.0.6",
-    "jest": "^26.1.0",
+    "@types/react": "^17.0.2",
+    "@types/react-is": "^17.0.0",
     "microbundle": "^0.12.2",
     "prettier": "^2.0.5",
-    "react-test-renderer": "^16.13.1",
-    "storybook-addon-pulse": "^0.1.1"
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1"
   },
   "peerDependencies": {
     "react": "*"

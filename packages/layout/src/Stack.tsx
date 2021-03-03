@@ -1,15 +1,24 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { getChildren } from './utils'
 
+export interface StackProps {
+  space?: string | number
+  stretch?: boolean
+  children: React.ReactNode
+  [x: string]: unknown
+}
+
 export const Stack = React.forwardRef(
-  ({ space, stretch, children, ...props }, ref) => (
+  (
+    { space, stretch, children, ...props }: StackProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => (
     <Box
       ref={ref}
       {...props}
-      __css={{
+      css={{
         ...(stretch
           ? {
               ':only-child': {
@@ -20,7 +29,7 @@ export const Stack = React.forwardRef(
       }}
     >
       {React.Children.map(getChildren(children), (c, i) => (
-        <Box key={i} __css={{ ...(i === 0 ? {} : { marginTop: space }) }}>
+        <Box key={i} css={{ ...(i === 0 ? {} : { marginTop: space }) }}>
           {c}
         </Box>
       ))}

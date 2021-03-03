@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@theme-ui/core'
+/** @jsxImportSource @theme-ui/core */
 import { Box } from '@theme-ui/components'
 import { Sidebar } from './Sidebar'
 import { textReact, paragraphs } from '@utilz/dummy'
@@ -21,14 +20,14 @@ const defaultProps = {
   sidebarWidth: '20rem',
   sidebar: (
     <Padded title="Sidebar" color="#eee">
-      {textReact(paragraphs(20, 50)).map(props => (
+      {textReact(paragraphs(20, 50)).map((props) => (
         <p {...props} />
       ))}
     </Padded>
   ),
   content: (
     <Padded title="Main" color="#e0e0e0">
-      {textReact(paragraphs(100, 150)).map(props => (
+      {textReact(paragraphs(100, 150)).map((props) => (
         <p {...props} />
       ))}
     </Padded>

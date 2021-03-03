@@ -1,19 +1,30 @@
-/** @jsx jsx */
+/** @jsxImportSource @theme-ui/core */
 import React from 'react'
-import { jsx, useThemeUI } from '@theme-ui/core'
+import { useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseSpace, getChildren } from './utils'
 
+export interface ClusterProps {
+  justify?: string // TODO: type
+  align?: string // TODO: type
+  space?: string | number
+  children: React.ReactNode
+  [x: string]: unknown
+}
+
 export const Cluster = React.forwardRef(
-  ({ justify, align, space, children, ...props }, ref) => {
+  (
+    { justify, align, space, children, ...props }: ClusterProps,
+    ref?: React.Ref<HTMLDivElement>
+  ) => {
     const { theme } = useThemeUI()
-    const adjustedSpace = normaliseSpace(theme)(space)
+    const adjustedSpace = space ? normaliseSpace(theme)(space) : '0px'
 
     return (
       <Box
         ref={ref}
         {...props}
-        __css={{
+        css={{
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: justify,
@@ -24,7 +35,7 @@ export const Cluster = React.forwardRef(
         {React.Children.map(getChildren(children), (c, i) => (
           <Box
             key={i}
-            __css={{ display: 'flex', margin: `calc(${adjustedSpace} / 2)` }}
+            sx={{ display: 'flex', margin: `calc(${adjustedSpace} / 2)` }}
           >
             {c}
           </Box>
