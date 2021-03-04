@@ -15,8 +15,8 @@
   "homepage": "https://github.com/stencil-ui/stencil-ui/tree/master/packages/layout#readme",
   "scripts": {
     "clean": "yarn cache clean",
-    "prepare": "microbundle --jsx React.createElement",
-    "watch": "microbundle --jsx React.createElement watch",
+    "prepare": "microbundle --format es,cjs,umd --jsx React.createElement",
+    "watch": "microbundle --format es,cjs,umd --jsx React.createElement watch",
     "storybook:clean": "rm -rf node_modules/.cache",
     "storybook": "yarn storybook:clean && start-storybook",
     "test": "jest",
