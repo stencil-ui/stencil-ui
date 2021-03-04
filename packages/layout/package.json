@@ -4,7 +4,6 @@
   "description": "Stencil UI layout components.",
   "source": "src/index.ts",
   "main": "dist/layout.js",
-  "exports": "./dist/layout.modern.js",
   "module": "dist/layout.module.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
