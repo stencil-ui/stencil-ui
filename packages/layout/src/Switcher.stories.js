@@ -1,4 +1,3 @@
-/** @jsxImportSource @theme-ui/core */
 import React from 'react'
 import { Switcher } from './Switcher'
 import { BorderBox, Paragraphs } from './utils'

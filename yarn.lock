@@ -2270,10 +2270,10 @@
     chroma-js "^2.1.2"
     csstype "^3.0.8"
 
-"@themeprint/ui@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@themeprint/ui/-/ui-0.1.8.tgz#95b625ca1ffbd9f385164db7000533416b25146f"
-  integrity sha512-Svk2E+IBfrSlzi7uBPt0i37MAUSTNdSexkxrh53XGSF7pIGSqWFFFdfaTZltaV+T71xSHs1/qHxWADRto/jQFA==
+"@themeprint/ui@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@themeprint/ui/-/ui-0.1.9.tgz#9d9171e847879355cfb585d755f11bc70671b3aa"
+  integrity sha512-CRf1FM4ChsZ8lRPbdm5/MinOZxUozAnWw7ePqsO09fzS1INWXSgzjeuUvZMgizdTFSginBFBPVxdvmKbdEOh6w==
   dependencies:
     "@theme-ui/core" "^0.10.0"
     "@theme-ui/css" "^0.10.1"

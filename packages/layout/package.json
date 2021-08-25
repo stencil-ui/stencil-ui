@@ -30,7 +30,7 @@
     "@theme-ui/components": "0.10.0",
     "@theme-ui/core": "0.10.0",
     "@theme-ui/css": "0.10.1",
-    "@themeprint/ui": "^0.1.8",
+    "@themeprint/ui": "^0.1.9",
     "react-is": "^17.0.2"
   },
   "devDependencies": {

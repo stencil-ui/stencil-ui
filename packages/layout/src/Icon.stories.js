@@ -1,4 +1,3 @@
-/** @jsxImportSource @theme-ui/core */
 import { Box } from '@theme-ui/components'
 import { Icon } from './Icon'
 import { withTheme } from './with-theme'

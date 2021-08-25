@@ -1,4 +1,3 @@
-/** @jsxImportSource @theme-ui/core */
 import React from 'react'
 import { Box } from '@theme-ui/components'
 import PropTypes from 'prop-types'

@@ -1,4 +1,3 @@
-/** @jsxImportSource @theme-ui/core */
 import React from 'react'
 import { useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'

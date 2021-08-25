@@ -1,4 +1,3 @@
-/** @jsxImportSource @theme-ui/core */
 import React from 'react'
 import { ThemeProvider } from '@theme-ui/core'
 import { Grid } from './Grid'
