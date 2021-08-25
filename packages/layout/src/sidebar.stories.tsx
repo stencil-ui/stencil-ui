@@ -1,14 +1,23 @@
-import { Box } from '@theme-ui/components'
-import { Sidebar } from './Sidebar'
+import React from 'react'
+import { Box, Text } from '@theme-ui/components'
+import { withTheme } from 'storybook'
+import { Sidebar } from './sidebar'
 import { textReact, paragraphs } from '@utilz/dummy'
-import { withTheme } from './with-theme'
 
 export default {
   title: 'Sidebar',
   decorators: [withTheme()],
 }
 
-const Padded = ({ title, children, color }) => (
+const Padded = ({
+  title,
+  children,
+  color,
+}: {
+  title: string
+  children: React.ReactNode
+  color: string
+}) => (
   <Box sx={{ p: 3, backgroundColor: color, height: '100%' }}>
     <h1>{title}</h1>
     {children}
@@ -20,14 +29,14 @@ const defaultProps = {
   sidebar: (
     <Padded title="Sidebar" color="#eee">
       {textReact(paragraphs(20, 50)).map((props) => (
-        <p {...props} />
+        <Text {...props} />
       ))}
     </Padded>
   ),
   content: (
     <Padded title="Main" color="#e0e0e0">
       {textReact(paragraphs(100, 150)).map((props) => (
-        <p {...props} />
+        <Text {...props} />
       ))}
     </Padded>
   ),

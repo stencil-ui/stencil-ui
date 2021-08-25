@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex } from './Flex'
+import { Flex } from './flex'
 
 export interface CenterProps {
   children: React.ReactNode

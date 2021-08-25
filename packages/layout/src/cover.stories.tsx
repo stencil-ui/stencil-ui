@@ -1,13 +1,12 @@
-import { Cover } from './Cover'
-import { BorderBox, Paragraphs, Words } from './utils'
-import { withTheme } from './with-theme'
+import { Cover } from './cover'
+import { withTheme, BorderBox, Paragraphs, Words } from 'storybook'
 
 export default { title: 'Cover', decorators: [withTheme()] }
 
 const defaultProps = {
   children: (
     <BorderBox>
-      <Paragraphs />
+      <Paragraphs number={5} />
     </BorderBox>
   ),
 }

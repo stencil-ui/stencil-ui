@@ -1,6 +1,5 @@
-import { Flex } from './Flex'
-import { withTheme } from './with-theme'
-import { BorderBox } from './utils'
+import { Flex } from './flex'
+import { withTheme, BorderBox } from 'storybook'
 
 export default { title: 'Flex', decorators: [withTheme()] }
 

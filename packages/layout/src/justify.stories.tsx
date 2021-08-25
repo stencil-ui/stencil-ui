@@ -1,8 +1,8 @@
 import React from 'react'
-import { Justify } from './Justify'
 import { Box } from '@theme-ui/components'
-import { withTheme } from './with-theme'
 import { textReact, paragraphs } from '@utilz/dummy'
+import { withTheme } from 'storybook'
+import { Justify } from './justify'
 
 export default { title: 'Justify', decorators: [withTheme()] }
 

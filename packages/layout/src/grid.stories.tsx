@@ -1,13 +1,10 @@
 import React from 'react'
-import { ThemeProvider } from '@theme-ui/core'
-import { Grid } from './Grid'
-import { arrayOfSize, BorderBox, Paragraphs } from './utils'
-import { defaultTheme } from '@themeprint/ui'
-import { withTheme } from './with-theme'
+import { Grid } from './grid'
+import { withTheme, arrayOfSize, BorderBox, Paragraphs } from 'storybook'
 
 export default { title: 'Grid', decorators: [withTheme()] }
 
-const defaultProps = (childrenNumber) => ({
+const defaultProps = (childrenNumber: number) => ({
   children: (
     <React.Fragment>
       {arrayOfSize(childrenNumber).map((i) => (
@@ -29,10 +26,10 @@ export const withSpaceEm = () => <Grid {...defaultProps(6)} space="2em" />
 
 export const withSpaceRem = () => <Grid {...defaultProps(6)} space="3rem" />
 
-export const withSpaceFunction = () => (
-  <ThemeProvider theme={defaultTheme}>
-    <Grid {...defaultProps(6)} space={(theme) => theme.space[2]} />
-  </ThemeProvider>
-)
+// export const withSpaceFunction = () => (
+//   <ThemeProvider theme={defaultTheme}>
+//     <Grid {...defaultProps(6)} space={(theme) => theme.space[2]} />
+//   </ThemeProvider>
+// )
 
 export const withMinWidth = () => <Grid {...defaultProps(6)} minWidth="140px" />
