@@ -1,4 +1,4 @@
-import { Frame } from './Frame'
+import { Frame } from './frame'
 import { withTheme } from 'storybook'
 
 export default { title: 'Frame', decorators: [withTheme()] }

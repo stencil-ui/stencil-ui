@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from './Grid'
+import { Grid } from './grid'
 import { withTheme, arrayOfSize, BorderBox, Paragraphs } from 'storybook'
 
 export default { title: 'Grid', decorators: [withTheme()] }

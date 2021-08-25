@@ -1,4 +1,4 @@
-import { Cover } from './Cover'
+import { Cover } from './cover'
 import { withTheme, BorderBox, Paragraphs, Words } from 'storybook'
 
 export default { title: 'Cover', decorators: [withTheme()] }

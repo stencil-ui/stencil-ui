@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@theme-ui/components'
-import { Icon } from './Icon'
 import { withTheme } from 'storybook'
+import { Icon } from './icon'
 
 export default {
   title: 'Icon',

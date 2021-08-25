@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switcher } from './Switcher'
+import { Switcher } from './switcher'
 import { withTheme, arrayOfSize, BorderBox, Paragraphs } from 'storybook'
 
 export default { title: 'Switcher', decorators: [withTheme()] }

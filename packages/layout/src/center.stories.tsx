@@ -1,5 +1,5 @@
 import React from 'react'
-import { Center } from './Center'
+import { Center } from './center'
 import { withTheme, arrayOfSize, BorderBox, Paragraphs } from 'storybook'
 
 export default { title: 'Center', decorators: [withTheme()] }

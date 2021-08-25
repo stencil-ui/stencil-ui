@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@theme-ui/components'
 import { textReact, paragraphs } from '@utilz/dummy'
 import { withTheme } from 'storybook'
-import { Justify } from './Justify'
+import { Justify } from './justify'
 
 export default { title: 'Justify', decorators: [withTheme()] }
 

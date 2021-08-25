@@ -1,8 +1,8 @@
 import React from 'react'
 import { Box, Text } from '@theme-ui/components'
-import { Sidebar } from './Sidebar'
+import { withTheme } from 'storybook'
+import { Sidebar } from './sidebar'
 import { textReact, paragraphs } from '@utilz/dummy'
-import { withTheme } from './storybook/with-theme'
 
 export default {
   title: 'Sidebar',

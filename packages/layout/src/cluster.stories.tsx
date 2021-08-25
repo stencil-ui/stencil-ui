@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import { Cluster } from './Cluster'
-import { withTheme, arrayOfSize, BorderBox, Words } from 'storybook/utils'
+import { Cluster } from './cluster'
+import { withTheme, arrayOfSize, BorderBox, Words } from 'storybook'
 
 export default { title: 'Cluster', decorators: [withTheme()] }
 
