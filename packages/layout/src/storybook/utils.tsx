@@ -7,27 +7,6 @@ export const arrayOfSize = (size: number): number[] =>
     .fill(null)
     .map((_, i) => i)
 
-// export const applyStyle = (component, style = {}) => {
-//   if (!component) {
-//     return { style }
-//   }
-
-//   if (!component.props) {
-//     return { style }
-//   }
-
-//   // TODO: deepmerge
-//   return { style: { ...(component.props.style || {}), ...style } }
-// }
-
-// export const getChildren = children => {
-//   if (isFragment(children)) {
-//     return children.props.children
-//   }
-
-//   return children
-// }
-
 export const BorderBox = ({
   children,
   ...props

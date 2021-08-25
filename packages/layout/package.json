@@ -18,11 +18,11 @@
     "prepare": "microbundle --format es,cjs,umd --jsx React.createElement",
     "watch": "microbundle --format es,cjs,umd --jsx React.createElement watch",
     "storybook:clean": "rm -rf node_modules/.cache",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "yarn storybook:clean && start-storybook -p 6006",
+    "storybook:build": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
-    "build-storybook": "build-storybook"
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
   },
   "publishConfig": {
     "access": "public"
