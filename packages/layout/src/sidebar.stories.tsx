@@ -24,25 +24,23 @@ const Padded = ({
   </Box>
 )
 
-// TODO: fix textReact return type
-const defaultProps = {}
-// const defaultProps = {
-//   sidebarWidth: '20rem',
-//   sidebar: (
-//     <Padded title="Sidebar" color="#eee">
-//       {textReact(paragraphs(20, 50)).map((props) => (
-//         <Text {...props} />
-//       ))}
-//     </Padded>
-//   ),
-//   content: (
-//     <Padded title="Main" color="#e0e0e0">
-//       {textReact(paragraphs(100, 150)).map((props) => (
-//         <Text {...props} />
-//       ))}
-//     </Padded>
-//   ),
-// }
+const defaultProps = {
+  sidebarWidth: '20rem',
+  sidebar: (
+    <Padded title="Sidebar" color="#eee">
+      {textReact(paragraphs(20, 50)).map((props) => (
+        <Text {...props} />
+      ))}
+    </Padded>
+  ),
+  content: (
+    <Padded title="Main" color="#e0e0e0">
+      {textReact(paragraphs(100, 150)).map((props) => (
+        <Text {...props} />
+      ))}
+    </Padded>
+  ),
+}
 
 export const withLeftSidebar = () => <Sidebar {...defaultProps} />
 

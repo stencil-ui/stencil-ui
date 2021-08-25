@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box } from '@theme-ui/components'
 import { textReact, paragraphs, words } from '@utilz/dummy'
+import { ThemeUIStyleObject } from '@theme-ui/css'
 
 export const arrayOfSize = (size: number): number[] =>
   Array(size)
@@ -8,12 +9,13 @@ export const arrayOfSize = (size: number): number[] =>
     .map((_, i) => i)
 
 export const BorderBox = ({
+  sx = {},
   children,
-  ...props
 }: {
+  sx: ThemeUIStyleObject
   children?: React.ReactNode
 }) => (
-  <Box {...props} sx={{ border: '1px solid #ccc', padding: '10px' }}>
+  <Box sx={{ border: '1px solid #ccc', padding: '10px', ...sx }}>
     {children}
   </Box>
 )

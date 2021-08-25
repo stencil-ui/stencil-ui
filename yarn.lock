@@ -3720,13 +3720,21 @@
     "@utilz/types" "^0.1.16"
     deepmerge "^4.2.2"
 
-"@utilz/dummy@^0.1.14":
-  version "0.1.14"
-  resolved "https://registry.yarnpkg.com/@utilz/dummy/-/dummy-0.1.14.tgz#ee133af89fab541d305789d350934889664f1038"
-  integrity sha512-EQe9/u9WLVTLJlCU4MmO0jPxWVViyuNk4MhKSrQPa2gEIOkwMBGWyVqHiwvbE9ltEjPfGx/K5x/kOeSgHKUmOg==
+"@utilz/deepmerge@^0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@utilz/deepmerge/-/deepmerge-0.1.19.tgz#c62a1323af4ee37984b81d116ae36d7fa2928008"
+  integrity sha512-m8qOLdSi8pxMC8hfKmXoewZheHmsOTmuZZvk8GVvX0tHFUmXL0T83lIzZg1z0U221kWPXdpIyydVBXwEG8OeFQ==
   dependencies:
-    "@utilz/deepmerge" "^0.1.18"
-    "@utilz/types" "^0.1.16"
+    "@utilz/types" "^0.1.17"
+    deepmerge "^4.2.2"
+
+"@utilz/dummy@^0.1.15":
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/@utilz/dummy/-/dummy-0.1.15.tgz#3af63f8e374e2beacf1f4de719f91015531bf122"
+  integrity sha512-OdA4NoF4M4CBMgpycrNmfS2Tg79kwnXNTWQOQu5/VLCTmbDjE0PWP+JpIZw1Mlg2mVt7mejTgN7VpeZgBdPDUQ==
+  dependencies:
+    "@utilz/deepmerge" "^0.1.19"
+    "@utilz/types" "^0.1.17"
     lorem-ipsum "^2.0.3"
     shortid "^2.2.16"
 
@@ -3741,6 +3749,11 @@
   version "0.1.16"
   resolved "https://registry.yarnpkg.com/@utilz/types/-/types-0.1.16.tgz#153761ba194deb6be637aa434f6b82b8db4e2c7d"
   integrity sha512-Ss8u8kKDervmZF85w+KZWYm/ajd63sfX2jSUmiRrsy6EPFSfIKLc4QhUi3MBO57nUjrFYtOVipl7T/Gvld8TCA==
+
+"@utilz/types@^0.1.17":
+  version "0.1.17"
+  resolved "https://registry.yarnpkg.com/@utilz/types/-/types-0.1.17.tgz#e4ccb39d819b216ef7482a652ac5e4d7ed76c5e0"
+  integrity sha512-shv5AAP6e0CwgzZ1SRsbN2QI+cewVu7pCLYn3V/ofN7AwQHfLjJJngSQl3OiB5/ergWQ9cwN9D3qNTK5eTaOBw==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"

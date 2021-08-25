@@ -6,7 +6,7 @@ import { withTheme, BorderBox, Paragraphs } from 'storybook'
 export default { title: 'Overlay', decorators: [withTheme()] }
 
 const Content = ({ children }: { children: React.ReactNode }) => (
-  <Box sx={{ bg: 'green', height: '400px', position: 'relative' }}>
+  <Box sx={{ bg: '#ccc', height: '400px', position: 'relative' }}>
     {children}
     <Paragraphs />
   </Box>
