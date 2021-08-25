@@ -3302,20 +3302,30 @@
     "@styled-system/core" "^5.1.2"
     "@styled-system/css" "^5.1.5"
 
-"@theme-ui/components@0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@theme-ui/components/-/components-0.10.0.tgz#c1aa9cade71e5a6cf7c19f9e0ade900122ef23f9"
-  integrity sha512-zPA+16fP+R140kns+3FBhybsPzNjcCWHgXcwIPjww1dfDnlXRa7al9Nz4Y8zyWvk1wNiGqUa09Y1sabK6EYspQ==
+"@theme-ui/components@0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/components/-/components-0.11.1.tgz#fccf6c9db7bececee64ddf24907dfb1be265ca8f"
+  integrity sha512-fWLTJe9zF045WS7Hhanj2PYRz0t6k883KCGHITES70rrTGZ7bL/+ooX34oZ5do9JrrVx/+80Tf7EtLQfzw9BFw==
   dependencies:
     "@emotion/react" "^11.1.1"
     "@emotion/styled" "^11.0.0"
     "@styled-system/color" "^5.1.2"
     "@styled-system/should-forward-prop" "^5.1.2"
     "@styled-system/space" "^5.1.2"
-    "@theme-ui/css" "0.10.0"
+    "@theme-ui/css" "0.11.1"
     "@types/styled-system" "^5.1.10"
 
-"@theme-ui/core@0.10.0", "@theme-ui/core@^0.10.0":
+"@theme-ui/core@0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/core/-/core-0.11.1.tgz#e7a3ced17a51cc57346360437cb6f94e4cbd3b0a"
+  integrity sha512-8TRblBlVdFfcGwm6xluaglY4VasHfvHFFXRJhiQe0wUriNto6jpWaLQnw+y9mQZ/cffLbX68Vo8i4pAauM8U2g==
+  dependencies:
+    "@emotion/react" "^11.1.1"
+    "@theme-ui/css" "0.11.1"
+    "@theme-ui/parse-props" "0.11.1"
+    deepmerge "^4.2.2"
+
+"@theme-ui/core@^0.10.0":
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/@theme-ui/core/-/core-0.10.0.tgz#2373d53368da5fa561915414ade070a9de0e9678"
   integrity sha512-3DeTHGqyqIi05JCsJ+G+fqW6YsX/oGJiaAvMgLfd86tGdJOnDseEBQG41oDFHSWtQSJDpBcoFgAWMGITmYdH+g==
@@ -3333,18 +3343,18 @@
     "@emotion/react" "^11.1.1"
     csstype "^3.0.5"
 
-"@theme-ui/css@^0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.10.1.tgz#a126831b7cc09e7302942b1876152f16483fde86"
-  integrity sha512-COb41YOne18CUk27KNQh9reZwEALy/h7qCFebjEtuakEWIt/jcG9/1+kmHUoYhpTqGsgCdM8HihzVcIDa0Wp8w==
+"@theme-ui/css@0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.11.1.tgz#e91f58306bd015c813f72b4dce25850a93d5ba47"
+  integrity sha512-b3M9EJ6EaUeJolQ5jMySGVqcliYgpMliSJmvTUPWogW43J+7chb6h/bZLymXDDhPHt+SVAtGIkR7n8aIvjFbcQ==
   dependencies:
     "@emotion/react" "^11.1.1"
     csstype "^3.0.5"
 
-"@theme-ui/css@^0.11.1":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.11.1.tgz#e91f58306bd015c813f72b4dce25850a93d5ba47"
-  integrity sha512-b3M9EJ6EaUeJolQ5jMySGVqcliYgpMliSJmvTUPWogW43J+7chb6h/bZLymXDDhPHt+SVAtGIkR7n8aIvjFbcQ==
+"@theme-ui/css@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.10.1.tgz#a126831b7cc09e7302942b1876152f16483fde86"
+  integrity sha512-COb41YOne18CUk27KNQh9reZwEALy/h7qCFebjEtuakEWIt/jcG9/1+kmHUoYhpTqGsgCdM8HihzVcIDa0Wp8w==
   dependencies:
     "@emotion/react" "^11.1.1"
     csstype "^3.0.5"
@@ -3356,6 +3366,14 @@
   dependencies:
     "@emotion/react" "^11.1.1"
     "@theme-ui/css" "0.10.0"
+
+"@theme-ui/parse-props@0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/parse-props/-/parse-props-0.11.1.tgz#2845c9b6f5503646aec972e2e7ade987fe1dea8b"
+  integrity sha512-0BHLVLiueLkH9jbT7TBuoIhqxKkgdmFFP6j/xe4V6bGfD33C4Qn/71nVwryecMFOI8AygvERhvzYu9fq1e3VNg==
+  dependencies:
+    "@emotion/react" "^11.1.1"
+    "@theme-ui/css" "0.11.1"
 
 "@theme-ui/preset-base@^0.11.1":
   version "0.11.1"
@@ -3372,10 +3390,10 @@
     chroma-js "^2.1.2"
     csstype "^3.0.8"
 
-"@themeprint/ui@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@themeprint/ui/-/ui-0.1.9.tgz#9d9171e847879355cfb585d755f11bc70671b3aa"
-  integrity sha512-CRf1FM4ChsZ8lRPbdm5/MinOZxUozAnWw7ePqsO09fzS1INWXSgzjeuUvZMgizdTFSginBFBPVxdvmKbdEOh6w==
+"@themeprint/ui@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@themeprint/ui/-/ui-0.1.10.tgz#e98cf6653761eb3b343ae12887dea217cc6fc2fc"
+  integrity sha512-DmCkaOMSEOuCFK5K5toK+rg5McDzXetEcfd++5XhpZNCh4Xcu+iqee1/n/t7ez1yMEPDQJWkzmbtxaatUpX1Bg==
   dependencies:
     "@theme-ui/core" "^0.10.0"
     "@theme-ui/css" "^0.10.1"

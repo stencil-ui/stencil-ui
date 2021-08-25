@@ -28,10 +28,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@theme-ui/components": "0.10.0",
-    "@theme-ui/core": "0.10.0",
-    "@theme-ui/css": "0.10.1",
-    "@themeprint/ui": "^0.1.9",
+    "@theme-ui/components": "0.11.1",
+    "@theme-ui/core": "0.11.1",
+    "@theme-ui/css": "0.11.1",
+    "@themeprint/ui": "^0.1.10",
     "react-is": "^17.0.2"
   },
   "devDependencies": {
@@ -40,7 +40,6 @@
     "@storybook/addon-essentials": "^6.3.7",
     "@storybook/addon-links": "^6.3.7",
     "@storybook/react": "^6.3.7",
-    "@theme-ui/css": "^0.11.1",
     "@theme-ui/preset-base": "^0.11.1",
     "@types/react": "^17.0.19",
     "@types/react-is": "^17.0.2",
