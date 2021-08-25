@@ -1,6 +1,6 @@
 {
   "name": "@stencil-ui/layout",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Stencil UI layout components.",
   "source": "src/index.ts",
   "main": "dist/layout.js",
