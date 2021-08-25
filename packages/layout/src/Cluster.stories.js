@@ -1,6 +1,4 @@
-/** @jsxImportSource @theme-ui/core */
 import React, { Fragment } from 'react'
-import { jsx } from '@theme-ui/core'
 import { Cluster } from './Cluster'
 import { arrayOfSize, BorderBox, Words } from './utils'
 import { withTheme } from './with-theme'

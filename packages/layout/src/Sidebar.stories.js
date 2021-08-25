@@ -1,4 +1,3 @@
-/** @jsxImportSource @theme-ui/core */
 import { Box } from '@theme-ui/components'
 import { Sidebar } from './Sidebar'
 import { textReact, paragraphs } from '@utilz/dummy'

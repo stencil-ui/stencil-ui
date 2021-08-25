@@ -1,4 +1,3 @@
-/** @jsxImportSource @theme-ui/core */
 import React from 'react'
 import { Flex } from './Flex'
 
