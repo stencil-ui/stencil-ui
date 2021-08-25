@@ -2,8 +2,7 @@ import { Fragment } from 'react'
 import { Box } from '@theme-ui/components'
 import { Stack } from './Stack'
 import { Center } from './Center'
-import { BorderBox } from './utils'
-import { withTheme } from './with-theme'
+import { withTheme, BorderBox } from 'storybook'
 
 export default { title: 'Stack', decorators: [withTheme()] }
 

@@ -34,8 +34,10 @@
     "react-is": "^17.0.2"
   },
   "devDependencies": {
+    "@theme-ui/preset-base": "^0.11.1",
     "@types/react": "^17.0.19",
     "@types/react-is": "^17.0.2",
+    "@utilz/dummy": "^0.1.14",
     "microbundle": "^0.13.3",
     "prettier": "^2.3.2",
     "prop-types": "^15.7.2",

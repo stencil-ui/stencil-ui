@@ -1,6 +1,7 @@
+import React from 'react'
 import { Box } from '@theme-ui/components'
 import { Icon } from './Icon'
-import { withTheme } from './with-theme'
+import { withTheme } from 'storybook'
 
 export default {
   title: 'Icon',
@@ -13,6 +14,14 @@ export default {
   ],
 }
 
+type SvgProps = {
+  width: number
+  height: number
+  viewBoxWidth: number
+  viewBoxHeight: number
+  children: React.ReactNode
+}
+
 const Svg = ({
   width,
   height,
@@ -20,9 +29,9 @@ const Svg = ({
   viewBoxHeight,
   children,
   ...props
-}) => (
+}: SvgProps) => (
   <Box
-    css={{
+    sx={{
       minWidth: width,
     }}
     {...props}
@@ -34,7 +43,7 @@ const Svg = ({
   </Box>
 )
 
-const PinIcon = (props) => (
+const PinIcon = (props: Record<string, unknown>) => (
   <Svg {...props} width={12} height={16} viewBoxWidth={384} viewBoxHeight={512}>
     <path
       fill="currentColor"

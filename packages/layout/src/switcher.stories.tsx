@@ -1,21 +1,19 @@
 import React from 'react'
 import { Switcher } from './Switcher'
-import { BorderBox, Paragraphs } from './utils'
-import { arrayOfSize } from './utils'
-import { withTheme } from './with-theme'
+import { withTheme, arrayOfSize, BorderBox, Paragraphs } from 'storybook'
 
 export default { title: 'Switcher', decorators: [withTheme()] }
 
-const Content = (props) => (
+const Content = (props: Record<string, unknown>) => (
   <BorderBox {...props}>
     <Paragraphs />
   </BorderBox>
 )
 
-const defaultProps = (numberItems) => ({
+const defaultProps = (numberItems: number) => ({
   children: (
     <React.Fragment>
-      {arrayOfSize(numberItems).map((i) => (
+      {arrayOfSize(numberItems).map((i: number) => (
         <Content key={i} />
       ))}
     </React.Fragment>

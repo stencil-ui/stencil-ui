@@ -1,11 +1,11 @@
+import React from 'react'
 import { Box } from '@theme-ui/components'
 import { Overlay } from './Overlay'
-import { BorderBox, Paragraphs } from './utils'
-import { withTheme } from './with-theme'
+import { withTheme, BorderBox, Paragraphs } from 'storybook'
 
 export default { title: 'Overlay', decorators: [withTheme()] }
 
-const Content = ({ children }) => (
+const Content = ({ children }: { children: React.RectNode }) => (
   <Box sx={{ bg: 'green', height: '400px', position: 'relative' }}>
     {children}
     <Paragraphs />

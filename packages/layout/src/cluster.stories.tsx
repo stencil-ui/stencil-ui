@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react'
 import { Cluster } from './Cluster'
-import { arrayOfSize, BorderBox, Words } from './utils'
-import { withTheme } from './with-theme'
+import { withTheme, arrayOfSize, BorderBox, Words } from 'storybook/utils'
 
 export default { title: 'Cluster', decorators: [withTheme()] }
 
-const Content = (props) => (
+const Content = (props: Record<string, unknown>) => (
   <BorderBox {...props}>
     <Words number={1} />
   </BorderBox>

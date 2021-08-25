@@ -1,11 +1,10 @@
 import React from 'react'
 import { Center } from './Center'
-import { arrayOfSize, BorderBox, Paragraphs } from './utils'
-import { withTheme } from './with-theme'
+import { withTheme, arrayOfSize, BorderBox, Paragraphs } from 'storybook'
 
 export default { title: 'Center', decorators: [withTheme()] }
 
-const defaultProps = (childrenNumber) => ({
+const defaultProps = (childrenNumber: number) => ({
   children: (
     <React.Fragment>
       {arrayOfSize(childrenNumber).map((i) => (

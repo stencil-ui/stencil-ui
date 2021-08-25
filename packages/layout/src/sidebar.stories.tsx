@@ -1,37 +1,48 @@
-import { Box } from '@theme-ui/components'
+import React from 'react'
+import { Box, Text } from '@theme-ui/components'
 import { Sidebar } from './Sidebar'
 import { textReact, paragraphs } from '@utilz/dummy'
-import { withTheme } from './with-theme'
+import { withTheme } from './storybook/with-theme'
 
 export default {
   title: 'Sidebar',
   decorators: [withTheme()],
 }
 
-const Padded = ({ title, children, color }) => (
+const Padded = ({
+  title,
+  children,
+  color,
+}: {
+  title: string
+  children: React.ReactNode
+  color: string
+}) => (
   <Box sx={{ p: 3, backgroundColor: color, height: '100%' }}>
     <h1>{title}</h1>
     {children}
   </Box>
 )
 
-const defaultProps = {
-  sidebarWidth: '20rem',
-  sidebar: (
-    <Padded title="Sidebar" color="#eee">
-      {textReact(paragraphs(20, 50)).map((props) => (
-        <p {...props} />
-      ))}
-    </Padded>
-  ),
-  content: (
-    <Padded title="Main" color="#e0e0e0">
-      {textReact(paragraphs(100, 150)).map((props) => (
-        <p {...props} />
-      ))}
-    </Padded>
-  ),
-}
+// TODO: fix textReact return type
+const defaultProps = {}
+// const defaultProps = {
+//   sidebarWidth: '20rem',
+//   sidebar: (
+//     <Padded title="Sidebar" color="#eee">
+//       {textReact(paragraphs(20, 50)).map((props) => (
+//         <Text {...props} />
+//       ))}
+//     </Padded>
+//   ),
+//   content: (
+//     <Padded title="Main" color="#e0e0e0">
+//       {textReact(paragraphs(100, 150)).map((props) => (
+//         <Text {...props} />
+//       ))}
+//     </Padded>
+//   ),
+// }
 
 export const withLeftSidebar = () => <Sidebar {...defaultProps} />
 
