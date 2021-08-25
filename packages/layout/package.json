@@ -27,19 +27,19 @@
     "access": "public"
   },
   "dependencies": {
-    "@theme-ui/components": "0.6.0-alpha.7",
-    "@theme-ui/core": "0.6.0-alpha.7",
-    "@theme-ui/css": "0.6.0-alpha.7",
-    "@themeprint/ui": "^0.1.4",
-    "react-is": "^17.0.1"
+    "@theme-ui/components": "0.10.0",
+    "@theme-ui/core": "0.10.0",
+    "@theme-ui/css": "0.10.1",
+    "@themeprint/ui": "^0.1.8",
+    "react-is": "^17.0.2"
   },
   "devDependencies": {
-    "@types/react": "^17.0.2",
-    "@types/react-is": "^17.0.0",
-    "microbundle": "^0.12.2",
-    "prettier": "^2.0.5",
+    "@types/react": "^17.0.19",
+    "@types/react-is": "^17.0.2",
+    "microbundle": "^0.13.3",
+    "prettier": "^2.3.2",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1"
+    "react": "^17.0.2"
   },
   "peerDependencies": {
     "react": "*"
