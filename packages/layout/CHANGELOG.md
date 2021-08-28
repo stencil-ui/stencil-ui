@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.15](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.14...@stencil-ui/layout@0.1.15) (2021-08-28)
+
+
+### Bug Fixes
+
+* use alias values for stack ([#39](https://github.com/stencil-ui/stencil-ui/issues/39)) ([c6fd9cc](https://github.com/stencil-ui/stencil-ui/commit/c6fd9cc5a2d7fa92834d4377224360e6bfcace43))
+
+
+
+
+
 ## [0.1.14](https://github.com/stencil-ui/stencil-ui/compare/@stencil-ui/layout@0.1.13...@stencil-ui/layout@0.1.14) (2021-08-25)
 
 
