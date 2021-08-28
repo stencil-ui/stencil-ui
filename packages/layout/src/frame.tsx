@@ -1,17 +1,14 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Box } from '@theme-ui/components'
 
 export interface FrameProps {
   ratio?: string
   children: React.ReactNode
-  [x: string]: unknown
+  [key: string]: unknown
 }
 
-export const Frame = React.forwardRef(
-  (
-    { ratio, children, ...props }: FrameProps,
-    ref?: React.Ref<HTMLDivElement>
-  ) => {
+export const Frame = forwardRef<HTMLDivElement, FrameProps>(
+  ({ ratio = '16:9', children, ...props }, ref) => {
     const child = React.Children.only(children)
     const ratioParts = ratio ? ratio.split(':') : [16, 9]
 
@@ -45,6 +42,4 @@ export const Frame = React.forwardRef(
   }
 )
 
-Frame.defaultProps = {
-  ratio: '16:9',
-}
+Frame.displayName = 'Frame'

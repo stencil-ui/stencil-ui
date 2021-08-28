@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Box } from '@theme-ui/components'
 
 export interface FlexProps {
@@ -6,13 +6,19 @@ export interface FlexProps {
   align?: string // TODO: type
   justify?: string // TODO: type
   children: React.ReactNode
-  [x: string]: unknown
+  [key: string]: unknown
 }
 
-export const Flex = React.forwardRef(
+export const Flex = forwardRef<HTMLDivElement, FlexProps>(
   (
-    { direction, align, justify, children, ...props }: FlexProps,
-    ref?: React.Ref<HTMLDivElement>
+    {
+      direction = 'row',
+      align = 'stretch',
+      justify = 'flex-start',
+      children,
+      ...props
+    },
+    ref
   ) => (
     <Box
       ref={ref}
@@ -29,8 +35,4 @@ export const Flex = React.forwardRef(
   )
 )
 
-Flex.defaultProps = {
-  direction: 'row',
-  align: 'stretch',
-  justify: 'flex-start',
-}
+Flex.displayName = 'Flex'

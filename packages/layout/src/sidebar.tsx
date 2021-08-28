@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Box } from '@theme-ui/components'
 
 export interface SidebarProps {
@@ -8,21 +8,21 @@ export interface SidebarProps {
   stretch?: boolean
   space?: string | number
   side: 'left' | 'right'
-  [x: string]: unknown
+  [key: string]: unknown
 }
 
-export const Sidebar = React.forwardRef(
+export const Sidebar = forwardRef<HTMLDivElement, SidebarProps>(
   (
     {
       sidebar,
       sidebarWidth,
-      stretch,
+      stretch = true,
       content,
-      side,
-      space,
+      side = 'left',
+      space = '0px',
       ...props
-    }: SidebarProps,
-    ref?: React.Ref<HTMLDivElement>
+    },
+    ref
   ) => {
     const isSidebarLeft = side === 'left'
 
@@ -67,9 +67,4 @@ export const Sidebar = React.forwardRef(
   }
 )
 
-Sidebar.defaultProps = {
-  side: 'left',
-  sidebarWidth: null,
-  stretch: true,
-  space: '0px',
-}
+Sidebar.displayName = 'Sidebar'

@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Box } from '@theme-ui/components'
-import PropTypes from 'prop-types'
 
 export interface CoverProps {
   space?: string | number
@@ -8,13 +7,13 @@ export interface CoverProps {
   top?: React.ReactNode
   bottom?: React.ReactNode
   children: React.ReactNode
-  [x: string]: unknown
+  [key: string]: unknown
 }
 
-export const Cover = React.forwardRef(
+export const Cover = forwardRef<HTMLDivElement, CoverProps>(
   (
-    { space, minHeight, top, children, bottom, ...props }: CoverProps,
-    ref?: React.Ref<HTMLDivElement>
+    { space = '0px', minHeight = '100vh', top, children, bottom, ...props },
+    ref
   ) => {
     return (
       <Box
@@ -59,13 +58,4 @@ export const Cover = React.forwardRef(
   }
 )
 
-Cover.propTypes = {
-  top: PropTypes.node,
-  children: PropTypes.node.isRequired,
-  bottom: PropTypes.node,
-}
-
-Cover.defaultProps = {
-  space: '0px',
-  minHeight: '100vh',
-}
+Cover.displayName = 'Cover'
