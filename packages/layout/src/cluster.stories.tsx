@@ -60,9 +60,9 @@ export const withFragment = () => (
   </Cluster>
 )
 
-export const withStringSpace = () => <Cluster {...defaultProps} space="l" />
+export const withAliasSpace = () => <Cluster {...defaultProps} space="l" />
 
-withStringSpace.story = {
+withAliasSpace.story = {
   decorators: [
     withTheme({
       space: {

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Box } from '@theme-ui/components'
-import { getChildren } from './utils'
+import { useThemeUI } from '@theme-ui/core'
+import { getChildren, normaliseSpace } from './utils'
 
 export interface StackProps {
   space?: string | number
@@ -9,34 +10,36 @@ export interface StackProps {
   [x: string]: unknown
 }
 
-export const Stack = React.forwardRef(
-  (
-    { space, stretch, children, ...props }: StackProps,
-    ref?: React.Ref<HTMLDivElement>
-  ) => (
-    <Box
-      ref={ref}
-      {...props}
-      css={{
-        ...(stretch
-          ? {
-              ':only-child': {
-                height: '100%',
-              },
-            }
-          : {}),
-      }}
-    >
-      {React.Children.map(getChildren(children), (c, i) => (
-        <Box key={i} css={{ ...(i === 0 ? {} : { marginTop: space }) }}>
-          {c}
-        </Box>
-      ))}
-    </Box>
-  )
+export const Stack = forwardRef<HTMLDivElement, StackProps>(
+  ({ space = '0px', stretch = true, children, ...props }, ref) => {
+    const { theme } = useThemeUI()
+    const adjustedSpace = space ? normaliseSpace(theme)(space) : '0px'
+
+    return (
+      <Box
+        ref={ref}
+        {...props}
+        css={{
+          ...(stretch
+            ? {
+                ':only-child': {
+                  height: '100%',
+                },
+              }
+            : {}),
+        }}
+      >
+        {React.Children.map(getChildren(children), (c, i) => (
+          <Box
+            key={i}
+            css={{ ...(i === 0 ? {} : { marginTop: adjustedSpace }) }}
+          >
+            {c}
+          </Box>
+        ))}
+      </Box>
+    )
+  }
 )
 
-Stack.defaultProps = {
-  space: '0px',
-  stretch: true,
-}
+Stack.displayName = 'Stack'

@@ -20,6 +20,23 @@ export const withSpace = () => (
   </Stack>
 )
 
+export const withAliasSpace = () => (
+  <Stack space="m">
+    <BorderBox />
+    <BorderBox />
+  </Stack>
+)
+
+withAliasSpace.story = {
+  decorators: [
+    withTheme({
+      space: {
+        m: 24,
+      },
+    }),
+  ],
+}
+
 export const withFragment = () => (
   <Stack space={2}>
     <Fragment>

@@ -12,7 +12,7 @@ export const BorderBox = ({
   sx = {},
   children,
 }: {
-  sx: ThemeUIStyleObject
+  sx?: ThemeUIStyleObject
   children?: React.ReactNode
 }) => (
   <Box sx={{ border: '1px solid #ccc', padding: '10px', ...sx }}>
