@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { Box } from '@theme-ui/components'
 
 export interface JustifyProps {
@@ -7,20 +7,20 @@ export interface JustifyProps {
   intrinsic?: boolean
   centerText?: boolean
   children: React.ReactNode
-  [x: string]: unknown
+  [key: string]: unknown
 }
 
-export const Justify = React.forwardRef(
+export const Justify = forwardRef<HTMLDivElement, JustifyProps>(
   (
     {
-      maxWidth,
-      gutter,
-      intrinsic,
-      centerText,
+      maxWidth = '60ch',
+      gutter = '0px',
+      intrinsic = false,
+      centerText = false,
       children,
       ...props
-    }: JustifyProps,
-    ref?: React.Ref<HTMLDivElement>
+    },
+    ref
   ) => {
     return (
       <Box
@@ -44,9 +44,4 @@ export const Justify = React.forwardRef(
   }
 )
 
-Justify.defaultProps = {
-  maxWidth: '60ch',
-  gutter: '0px',
-  intrinsic: false,
-  centerText: false,
-}
+Justify.displayName = 'Justify'

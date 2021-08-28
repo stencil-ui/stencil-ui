@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseSpace } from './utils'
@@ -8,13 +8,13 @@ export interface OverlayProps {
   space?: string | number
   fixed?: boolean
   children: React.ReactNode
-  [x: string]: unknown
+  [key: string]: unknown
 }
 
-export const Overlay = React.forwardRef(
+export const Overlay = forwardRef<HTMLDivElement, OverlayProps>(
   (
-    { breakout, space, fixed, children, ...props }: OverlayProps,
-    ref?: React.Ref<HTMLDivElement>
+    { breakout = false, space = '0px', fixed = false, children, ...props },
+    ref
   ) => {
     const { theme } = useThemeUI()
     const adjustedSpace = space ? normaliseSpace(theme)(space) : '0px'
@@ -43,8 +43,4 @@ export const Overlay = React.forwardRef(
   }
 )
 
-Overlay.defaultProps = {
-  breakout: false,
-  space: '0px',
-  fixed: false,
-}
+Overlay.displayName = 'Overlay'

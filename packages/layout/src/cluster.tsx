@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseSpace, getChildren } from './utils'
@@ -8,13 +8,19 @@ export interface ClusterProps {
   align?: string // TODO: type
   space?: string | number
   children: React.ReactNode
-  [x: string]: unknown
+  [key: string]: unknown
 }
 
-export const Cluster = React.forwardRef(
+export const Cluster = forwardRef<HTMLDivElement, ClusterProps>(
   (
-    { justify, align, space, children, ...props }: ClusterProps,
-    ref?: React.Ref<HTMLDivElement>
+    {
+      justify = 'flex-start',
+      align = 'flex-start',
+      space = '0px',
+      children,
+      ...props
+    },
+    ref
   ) => {
     const { theme } = useThemeUI()
     const adjustedSpace = space ? normaliseSpace(theme)(space) : '0px'
@@ -44,8 +50,4 @@ export const Cluster = React.forwardRef(
   }
 )
 
-Cluster.defaultProps = {
-  justify: 'flex-start',
-  align: 'flex-start',
-  space: '0px',
-}
+Cluster.displayName = 'Cluster'

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseSpace, getChildren } from './utils'
@@ -8,13 +8,13 @@ export interface SwitchProps {
   space?: string | number
   limit?: number
   children: React.ReactNode
-  [x: string]: unknown
+  [key: string]: unknown
 }
 
-export const Switcher = React.forwardRef(
+export const Switcher = forwardRef<HTMLDivElement, SwitchProps>(
   (
-    { threshold, space, limit, children, ...props }: SwitchProps,
-    ref?: React.Ref<HTMLDivElement>
+    { threshold = '40rem', space = '0px', limit = 3, children, ...props },
+    ref
   ) => {
     const { theme } = useThemeUI()
     const adjustedSpace = space ? normaliseSpace(theme)(space) : '0px'
@@ -54,8 +54,4 @@ export const Switcher = React.forwardRef(
   }
 )
 
-Switcher.defaultProps = {
-  space: '0px',
-  threshold: '40rem',
-  limit: 3,
-}
+Switcher.displayName = 'Switcher'

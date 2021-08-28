@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useThemeUI } from '@theme-ui/core'
 import { Box } from '@theme-ui/components'
 import { normaliseSpace } from './utils'
@@ -10,13 +10,21 @@ export interface IconProps {
   width?: string | number
   height?: string | number
   children: React.ReactNode
-  [x: string]: unknown
+  [key: string]: unknown
 }
 
-export const Icon = React.forwardRef(
+export const Icon = forwardRef<HTMLDivElement, IconProps>(
   (
-    { space, label, align, width, height, children, ...props }: IconProps,
-    ref?: React.Ref<HTMLDivElement>
+    {
+      space = '0px',
+      label,
+      align = 'baseline',
+      width = '1rem',
+      height = '1rem',
+      children,
+      ...props
+    },
+    ref
   ) => {
     const { theme } = useThemeUI()
     const adjustedSpace = space ? normaliseSpace(theme)(space) : '0px'
@@ -43,10 +51,4 @@ export const Icon = React.forwardRef(
   }
 )
 
-Icon.defaultProps = {
-  space: '0px',
-  label: undefined,
-  align: 'baseline',
-  height: '1rem',
-  width: '1rem',
-}
+Icon.displayName = 'Icon'
